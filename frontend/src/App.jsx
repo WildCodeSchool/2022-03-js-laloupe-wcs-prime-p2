@@ -1,11 +1,10 @@
-import Home from "@pages/Home";
-
+import Slider from "./components/Slider";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Slider />
       <p>coucou</p>
     </div>
   );

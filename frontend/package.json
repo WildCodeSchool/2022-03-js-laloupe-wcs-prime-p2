@@ -10,8 +10,13 @@
     "fix": "prettier --write . && eslint --fix --ext .jsx ."
   },
   "dependencies": {
+    "axios": "^0.26.1",
+    "carousel": "^0.0.3",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-responsive": "^9.0.0-beta.6",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
