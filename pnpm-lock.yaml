@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@fortawesome/fontawesome-svg-core': ^6.1.1
   '@vitejs/plugin-react': ^1.0.7
   axios: ^0.26.1
   eslint: ^8.11.0
@@ -20,6 +21,7 @@ specifiers:
   vite: ^2.8.0
 
 dependencies:
+  '@fortawesome/fontawesome-svg-core': 6.1.1
   axios: 0.26.1
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -332,6 +334,20 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@fortawesome/fontawesome-common-types/6.1.1:
+    resolution: {integrity: sha512-wVn5WJPirFTnzN6tR95abCx+ocH+3IFLXAgyavnf9hUmN0CfWoDjPT/BAWsUVwSlYYVBeCLJxaqi7ZGe4uSjBA==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
+
+  /@fortawesome/fontawesome-svg-core/6.1.1:
+    resolution: {integrity: sha512-NCg0w2YIp81f4V6cMGD9iomfsIj7GWrqmsa0ZsPh59G7PKiGN1KymZNxmF00ssuAlo/VZmpK6xazsGOwzKYUMg==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.1.1
+    dev: false
 
   /@humanwhocodes/config-array/0.9.5:
     resolution: {integrity: sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw==}
