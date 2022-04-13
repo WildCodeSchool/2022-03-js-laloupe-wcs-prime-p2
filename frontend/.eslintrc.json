@@ -1,4 +1,5 @@
 {
+  
   "env": {
     "browser": true,
     "es2021": true
@@ -44,6 +45,7 @@
           
       },
         "extensions": [".js", ".jsx"]
+        
       }
     }
   }
