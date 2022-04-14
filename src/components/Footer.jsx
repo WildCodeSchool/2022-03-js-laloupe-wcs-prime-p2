@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import ButtonNav from "./ButtonsNav";
 import "./footer.scss";
+
 export default function Footer() {
   return (
     <footer className="Footer">
