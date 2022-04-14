@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import HomeIcons from "../assets/Home.png";
 import CatIcons from "../assets/Categories.png";
 import CoeurIcons from "../assets/Coeur.png";
-import Home from "@pages/Home";
+
 export default function ButtonNav() {
   return (
     <div>

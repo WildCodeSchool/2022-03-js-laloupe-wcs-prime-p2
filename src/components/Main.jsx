@@ -7,7 +7,6 @@ import Films from "@pages/Films";
 const Main = () => {
   return (
     <main className="mainpage">
-      <section>blablalblalbabla</section>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Categories" element={<Categories />} />
