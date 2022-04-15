@@ -1,5 +1,7 @@
+import Carousels from "@components/Carousels";
+
 const Home = () => {
-  return <h2>Hello</h2>;
+  return <Carousels />;
 };
 
 export default Home;
