@@ -16,6 +16,7 @@ function App() {
         <Route path="/CoupDeCoeur" element={<CoupDeCoeur />} />
         <Route path="/Films" element={<Films />} />
       </Routes>
+
       <Footer />
     </div>
   );
