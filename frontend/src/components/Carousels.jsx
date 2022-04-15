@@ -15,7 +15,7 @@ const Carousels = () => {
   return (
     <Slider {...settings}>
       {tab.map((item) => (
-        <div className="carousels">
+        <div key={`carousel-${item.id}`} className="carousels">
           <div className="card">
             <div className="card-top">
               <img src={item.image} alt="" />
