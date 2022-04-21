@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import Categories from "@pages/Categories";
 import CoupDeCoeur from "@pages/CoupDeCoeur";
 import Films from "@pages/Films";
-import "./mainpage.scss";
 
 const Main = () => {
   return (
