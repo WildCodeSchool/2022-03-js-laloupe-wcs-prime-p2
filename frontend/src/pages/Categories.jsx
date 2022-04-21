@@ -1,5 +1,7 @@
+import Category from "@components/Category";
+
 const Categories = () => {
-  return <h2>Categories</h2>;
+  return <Category />;
 };
 
 export default Categories;
