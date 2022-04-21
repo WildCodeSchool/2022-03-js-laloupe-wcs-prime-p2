@@ -1,4 +1,5 @@
 import "./Movie.scss";
+
 const Movie = ({ posterPath, title }) => {
   return (
     <figure className="movie">
