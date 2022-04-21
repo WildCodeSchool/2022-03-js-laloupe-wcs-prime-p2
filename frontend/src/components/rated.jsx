@@ -1,31 +1,27 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import "./Carousels.css";
+
+import "./rated.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Carousels = () => {
+const Rated = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToShow: 7,
+    slidesToScroll: 4,
     initialSlide: 0,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 4,
+          slidesToScroll: 4,
           infinite: true,
           dots: true,
-          autoplay: true,
-          autoplaySpeed: 4000,
           pauseOnHover: true,
         },
       },
@@ -36,7 +32,7 @@ const Carousels = () => {
     // Send the request
     axios
       .get(
-        "https://api.themoviedb.org/3/movie/upcoming?api_key=94b0467408dc50f0db83378d241839d5"
+        "https://api.themoviedb.org/3/movie/top_rated?api_key=94b0467408dc50f0db83378d241839d5"
       )
       // Extract the DATA from the received response
       .then((response) => {
@@ -52,22 +48,24 @@ const Carousels = () => {
     getImage();
   }, []);
   return (
-    <Slider {...settings}>
-      {image.map((item) => (
-        <div key={`carousel-${item.id}`} className="carousels">
-          <div className="card">
-            <div className="card-top">
-              <img
-                src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
-                alt=""
-              />
-              <h2>{item.original_title}</h2>
+    <div className="rate">
+      <h2 className="top-rated">Les mieux notés</h2>
+      <Slider {...settings}>
+        {image.map((item) => (
+          <div key={`carousel-${item.id}`} className="carousels">
+            <div className="card">
+              <div className="card-top">
+                <img
+                  src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
+                  alt=""
+                />
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </Slider>
+        ))}
+      </Slider>
+    </div>
   );
 };
 
-export default Carousels;
+export default Rated;
