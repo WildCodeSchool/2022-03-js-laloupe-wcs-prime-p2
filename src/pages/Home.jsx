@@ -5,19 +5,12 @@ import Rated from "@components/rated";
 
 const Home = () => {
   return (
-<<<<<<< HEAD
-    <div>
-      <Header />
-      <h2>Hello</h2>
-      <Carousels />
-    </div>
-=======
     <>
+      <Header />
       <Carousels />
       <Populars />
       <Rated />
     </>
->>>>>>> dev
   );
 };
 
