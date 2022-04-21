@@ -18,9 +18,10 @@ const Categories = () => {
 
       // State update
       .then((data) => {
-        console.log(data);
+        console.warn(data);
         setGenres(data.results);
       });
+    console.warn(genres);
   };
 
   useEffect(() => {
