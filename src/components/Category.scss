@@ -1,0 +1,18 @@
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.category img {
+  width: 20rem;
+  height: 15rem;
+  border: 3px rgb(168, 164, 175) solid;
+  margin: 7%;
+  object-fit: cover;
+  box-shadow: 5px 5px 5px black;
+}
+
+h3 {
+  color: aliceblue;
+}
