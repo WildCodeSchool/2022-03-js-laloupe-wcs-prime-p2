@@ -1,4 +1,4 @@
-import CardGenre from "@components/CardGenre";
-import { useState, useEffect } from "react";
+// import CardGenre from "@components/CardGenre";
+// import { useState, useEffect } from "react";
 
-export default function Categories() {}
+// export default function Categories() {}
