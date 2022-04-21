@@ -20,17 +20,19 @@ const Categories = () => {
       .then((data) => {
         setGenres(data.results);
       });
+
+    console.warn(genres);
   };
 
   useEffect(() => {
     getGenres();
   }, []);
   return (
-    <div id="tags">
-      <div class="tag">Action</div>
-      <div class="tag">Drama</div>
-      <div class="tag">Anime</div>
-      <div class="tag">Comedy</div>
+    <div className="tags">
+      <div className="tag">Action</div>
+      <div className="tag">Drama</div>
+      <div className="tag">Anime</div>
+      <div className="tag">Comedy</div>
     </div>
   );
 };
