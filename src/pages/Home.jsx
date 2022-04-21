@@ -5,7 +5,6 @@ const Home = () => {
   return (
     <>
       <Carousels />
-      <h2 className="popular-title">Populaires</h2>
       <Populars />
     </>
   );

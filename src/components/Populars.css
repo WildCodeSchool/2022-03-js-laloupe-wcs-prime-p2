@@ -4,4 +4,10 @@
     color: aqua;
     padding-left: 2rem;
     margin: 0;
+    
 }
+.slick-dots{
+    margin-bottom: 1em;
+    visibility: hidden;
+ }
+
