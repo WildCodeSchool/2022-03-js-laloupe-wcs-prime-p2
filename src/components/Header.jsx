@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import "./Header.css";
-import SearchBar from "./SearchBar";
+
 
 
 const Header = () => {
@@ -9,11 +9,8 @@ const Header = () => {
     <header>
       <div className="logo">
         <img src={logo} alt="logo" />
-        
-      </div>
-      
-      
-    </header>
+        </div>
+      </header>
   );
 };
 export default Header;

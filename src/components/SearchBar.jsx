@@ -1,4 +1,4 @@
-/* import React from "react";
+import React from "react";
 import "./SearchBar.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -32,4 +32,4 @@ const SearchBar= ()=> {
   );
 }
 
-export default SearchBar; */
+export default SearchBar;
