@@ -8,11 +8,6 @@ const Header = () => {
       <div className="logo">
         <img src={logo} alt="logo" />
       </div>
-      <input
-        type="text"
-        id="search"
-        placeholder="Rechercher un titre de film"
-      />
     </header>
   );
 };
