@@ -7,6 +7,9 @@
   width: 70%;
   margin: 0 auto;
 }
+.carousel {
+  margin-top: 50px;
+}
 img {
   max-width: 100%;
   border-radius: 8px;
@@ -23,4 +26,19 @@ h2 {
 .slick-next {
   visibility: hidden;
   right: 0;
+}
+.overview {
+  display: block;
+  position: absolute;
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 100px;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
