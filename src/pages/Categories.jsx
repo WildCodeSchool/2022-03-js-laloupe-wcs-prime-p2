@@ -70,7 +70,7 @@ const genresData = [
 function Categories() {
   return (
     <div>
-      {genresData.map((genreInfos, index) => (
+      {genresData.map((genreInfos) => (
         <Link to={`/Categories/${genreInfos.id}`}>
           <Category
             key={genreInfos.id}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import DisplayComponent from "./DisplayComponent";
+import { useParams } from "react-router-dom";
 import axios from "axios";
+import DisplayComponent from "./DisplayComponent";
 
 const DisplayMovies = () => {
   const { genre } = useParams();
@@ -21,7 +21,7 @@ const DisplayMovies = () => {
       // On actualise le state avec les nouvelles valeurs récupérés
       .then((data) => {
         setGenreDetails(data.results);
-        console.log(data.results);
+        // console.log(data.results);
       });
   };
 
