@@ -1,26 +1,22 @@
-.category{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    
-  }
-
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
 .category img {
-    width: 20rem;
-    height: 15rem;
-    border: 3px rgb(168, 164, 175) solid;
-    margin: 7%;
-    object-fit: cover;
-    box-shadow: 5px 5px 5px black;
-    text-align: center;
-    margin: 0;
+  width: 20rem;
+  height: 15rem;
+  border: 3px rgb(168, 164, 175) solid;
+  margin: 7%;
+  object-fit: cover;
+  box-shadow: 5px 5px 5px black;
+  text-align: center;
+  margin: 0;
 }
-.category div{
-    margin: 30px;
+.category div {
+  margin: 30px;
 }
-h3{
-    color: aliceblue;
-    
-
+h3 {
+  color: aliceblue;
 }
