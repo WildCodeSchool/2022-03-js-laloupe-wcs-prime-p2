@@ -1,5 +1,6 @@
 import Category from "@components/Category";
 import { Link } from "react-router-dom";
+import Header from "@components/Header";
 
 const genresData = [
   {
@@ -70,6 +71,7 @@ const genresData = [
 function Categories() {
   return (
     <div>
+      <Header />
       {genresData.map((genreInfos) => (
         <Link to={`/Categories/${genreInfos.id}`}>
           <Category
