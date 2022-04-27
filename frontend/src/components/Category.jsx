@@ -8,7 +8,7 @@ import React from "react";
 const Category = ({ name, image }) => {
   return (
     <figure className="category">
-      <img src={image} alt="" />
+      <img className="cardimg" src={image} alt="" />
       <figcaption className="title">{name}</figcaption>
     </figure>
   );
