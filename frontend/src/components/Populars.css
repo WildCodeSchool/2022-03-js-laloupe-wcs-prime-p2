@@ -1,11 +1,94 @@
-
-.popular-title {
-    text-align: left;
-    margin: 20px;
-    
+.card-popular {
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  /* overflow: hidden; */
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
 }
-.slick-dots{
-    margin-bottom: 1em;
-    visibility: hidden;
- }
 
+.carousel-popular {
+  margin-top: 50px;
+}
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.slick-dots {
+  visibility: hidden;
+}
+h2 {
+  color: #fff;
+  text-shadow: 2px 2px 5px #000;
+}
+.slick-next {
+  visibility: hidden;
+  right: 0;
+}
+.popular-title {
+  text-align: left;
+  margin: 20px;
+}
+.slick-dots {
+  margin-bottom: 1em;
+  visibility: hidden;
+}
+.movie-over-popular {
+  max-height: 100%;
+  overflow: auto;
+  display: none;
+  z-index: inherit;
+  width: 100%;
+}
+.contenu {
+  padding: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  .card-popular {
+    transition: 0.5s ease;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  .card-popular:hover {
+    transition: 0.7s ease;
+    transition-delay: 1s, 250ms;
+    transform: scale(1.5, 1.5);
+    z-index: 2000;
+    position: relative;
+    overflow: visible;
+    z-index: 2000;
+  }
+  .card-popular:hover .movie-over-popular {
+    transform: translateY(0%);
+    transition: 5s;
+    transition-delay: 5s, 3s;
+    display: block;
+    position: absolute;
+    top: 65%;
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    text-align: left;
+    height: 100px;
+    width: 100%;
+    z-index: 2000;
+  }
+
+  .slick-dots {
+    margin-top: 3em;
+    visibility: visible;
+    color: aqua;
+  }
+  .slick-next {
+    visibility: hidden;
+  }
+  .slick-dots li button::before {
+    color: aqua;
+    opacity: 100;
+  }
+  slick-dots li.slick-active button::before {
+    color: aqua;
+  }
+}

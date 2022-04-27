@@ -18,19 +18,17 @@ const DisplayMovies = () => {
   }, []);
 
   return (
-    <>
+    <div className="category">
       <Header />
-      <div className="category">
-        {genreDetails?.map((movie) => (
-          <DisplayComponent
-            key={movie.id}
-            id={movie.id}
-            title={movie.title}
-            image={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-          />
-        ))}
-      </div>
-    </>
+      {genreDetails?.map((movie) => (
+        <DisplayComponent
+          key={movie.id}
+          id={movie.id}
+          title={movie.title}
+          image={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+        />
+      ))}
+    </div>
   );
 };
 
