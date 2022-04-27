@@ -4,7 +4,7 @@
   cursor: pointer;
   /* overflow: hidden; */
   position: relative;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -35,22 +35,26 @@ h2 {
   visibility: hidden;
 }
 .movie-over-popular {
-  max-height: 50%;
+  max-height: 100%;
   overflow: auto;
   display: none;
   z-index: inherit;
   width: 100%;
-  transform: translateY(100%);
+}
+.contenu {
+  padding: 5px;
 }
 
 @media screen and (min-width: 1024px) {
   .card-popular {
     transition: 0.5s ease;
+    margin-bottom: 40px;
+    margin-top: 40px;
   }
   .card-popular:hover {
     transition: 0.7s ease;
     transition-delay: 1s, 250ms;
-    transform: scale(2, 2);
+    transform: scale(1.5, 1.5);
     z-index: 2000;
     position: relative;
     overflow: visible;
@@ -62,27 +66,29 @@ h2 {
     transition-delay: 5s, 3s;
     display: block;
     position: absolute;
-    top: 50%;
+    top: 65%;
     background-color: black;
     color: white;
     font-size: 10px;
     text-align: left;
-    height: 150px;
+    height: 100px;
     width: 100%;
     z-index: 2000;
   }
 
   .slick-dots {
-    margin-bottom: 1em;
+    margin-top: 3em;
     visibility: visible;
     color: aqua;
   }
-  /* .movie-popular {
-    width: 90%;
-    margin: 0 auto;
-  } */
   .slick-next {
     visibility: hidden;
-    /* right: 0; */
+  }
+  .slick-dots li button::before {
+    color: aqua;
+    opacity: 100;
+  }
+  slick-dots li.slick-active button::before {
+    color: aqua;
   }
 }
