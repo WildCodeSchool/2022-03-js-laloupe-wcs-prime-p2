@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import DisplayComponent from "./DisplayComponent";
+import Header from "./Header";
 
 const DisplayMovies = () => {
   const { genre } = useParams();
@@ -36,6 +37,7 @@ const DisplayMovies = () => {
 
   return (
     <div className="category">
+      <Header />
       {genreDetails?.map((movie) => (
         <DisplayComponent
           key={movie.id}

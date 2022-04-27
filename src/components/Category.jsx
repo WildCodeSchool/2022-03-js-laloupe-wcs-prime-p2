@@ -5,14 +5,11 @@ import React from "react";
 // les valeurs passées vont permettre d'être rebalancés
 // dans le call API par le composant
 
-const Category = ({ name, image, id }) => {
+const Category = ({ name, image }) => {
   return (
     <figure className="category">
-      <p>{id}</p>
       <img src={image} alt="" />
-      <div>
-        <h3>{name}</h3>
-      </div>
+      <figcaption className="title">{name}</figcaption>
     </figure>
   );
 };
