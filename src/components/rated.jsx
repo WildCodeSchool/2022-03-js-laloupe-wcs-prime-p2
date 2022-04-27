@@ -1,7 +1,6 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
 import "./rated.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
@@ -49,16 +48,25 @@ const Rated = () => {
   }, []);
   return (
     <div className="rate">
-      <h2 className="top-rated">Les mieux notés</h2>
+      <h2 className="rated-title">Les mieux notés</h2>
       <Slider {...settings}>
         {image.map((item) => (
-          <div key={`carousel-${item.id}`} className="carousels">
-            <div className="card">
+          <div key={`carousel-${item.id}`} className="carousels-rated">
+            <div className="card-rated">
               <div className="card-top">
                 <img
                   src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
                   alt=""
                 />
+                <div className="movie-over-rated">
+                  <div className="contenu-rated">
+                    <p className="overview-rated">Title : {item.title}</p>
+                    <p className="vote-rated">⭐️ {item.vote_average} </p>
+                    <p className="date-rated">
+                      Date de sorti : {item.release_date}{" "}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
