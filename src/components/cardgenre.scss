@@ -1,0 +1,13 @@
+.cardgenre {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.cardgenre > button {
+  background-color: white;
+  padding: 20px;
+  border-radius: 30px;
+  width: 25%;
+  margin: 10px;
+}
