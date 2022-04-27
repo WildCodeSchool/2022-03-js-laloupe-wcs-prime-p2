@@ -11,19 +11,19 @@ export default function ButtonNav() {
         <Link to="/">
           <li>
             <img className="imgFooter" src={HomeIcons} alt="Home Icons" />
-            <p>Home</p>
+            <p className="nav">Home</p>
           </li>
         </Link>
         <Link to="/Categories">
           <li>
             <img className="imgFooter" src={CatIcons} alt="Categories Icons" />
-            <p>Genres</p>
+            <p className="nav">Genres</p>
           </li>
         </Link>
         <Link to="/CoupDeCoeur">
           <li>
             <img className="imgFooter" src={CoeurIcons} alt="Coup de coeur" />
-            <p>Favorite</p>
+            <p className="nav">Favorite</p>
           </li>
         </Link>
       </ul>

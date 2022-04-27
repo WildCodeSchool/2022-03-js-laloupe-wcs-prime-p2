@@ -49,13 +49,17 @@ const Populars = () => {
       <h2 className="popular-title">Populaires</h2>
       <Slider {...settings}>
         {popular.map((item) => (
-          <div key={`carousel-${item.id}`} className="carousels">
-            <div className="card">
-              <div className="card-top">
+          <div key={`carousel-${item.id}`} className="carousels-popular">
+            <div className="card-popular">
+              <div className="card-top-popular">
                 <img
                   src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
                   alt="poster"
                 />
+              </div>
+              <div className="movie-over-popular">
+                <p className="overview">Title : {item.title}</p>
+                <p className="vote">⭐️ {item.vote_average} </p>
               </div>
             </div>
           </div>

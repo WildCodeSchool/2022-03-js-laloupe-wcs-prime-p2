@@ -7,7 +7,11 @@
   width: 70%;
   margin: 0 auto;
 }
-img {
+
+.carousel {
+  margin-top: 50px;
+}
+.nouv {
   max-width: 100%;
   border-radius: 8px;
   -webkit-box-reflect: below 2px
@@ -19,8 +23,4 @@ img {
 h2 {
   color: #fff;
   text-shadow: 2px 2px 5px #000;
-}
-.slick-next {
-  visibility: hidden;
-  right: 0;
 }
