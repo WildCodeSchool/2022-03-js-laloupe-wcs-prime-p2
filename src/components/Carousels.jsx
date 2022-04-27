@@ -58,6 +58,7 @@ const Carousels = () => {
           <div className="card">
             <div className="card-top">
               <img
+                className="nouv"
                 src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
                 alt=""
               />

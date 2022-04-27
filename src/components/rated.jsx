@@ -48,11 +48,11 @@ const Rated = () => {
   }, []);
   return (
     <div className="rate">
-      <h2 className="top-rated">Les mieux notés</h2>
+      <h2 className="rated-title">Les mieux notés</h2>
       <Slider {...settings}>
         {image.map((item) => (
-          <div key={`carousel-${item.id}`} className="carousels">
-            <div className="card">
+          <div key={`carousel-${item.id}`} className="carousels-rated">
+            <div className="card-rated">
               <div className="card-top">
                 <img
                   src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
