@@ -52,22 +52,25 @@ const Carousels = () => {
     getImage();
   }, []);
   return (
-    <Slider {...settings}>
-      {image.map((item) => (
-        <div key={`carousel-${item.id}`} className="carousel">
-          <div className="card">
-            <div className="card-top">
-              <img
-                className="nouv"
-                src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
-                alt=""
-              />
-              <h2>{item.original_title}</h2>
+    <>
+      <h1>Upcomming films</h1>
+      <Slider {...settings}>
+        {image.map((item) => (
+          <div key={`carousel-${item.id}`} className="carousel">
+            <div className="card">
+              <div className="card-top">
+                <img
+                  className="nouv"
+                  src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
+                  alt=""
+                />
+                <h2>{item.original_title}</h2>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </Slider>
+        ))}
+      </Slider>
+    </>
   );
 };
 
