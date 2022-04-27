@@ -21,12 +21,12 @@ const DisplayMovies = () => {
     <>
       <Header />
       <div className="category">
-        {genreDetails?.map(({ id, title, poster_path }) => (
+        {genreDetails?.map((movie) => (
           <DisplayComponent
-            key={id}
-            id={id}
-            title={title}
-            image={`https://image.tmdb.org/t/p/original${poster_path}`}
+            key={movie.id}
+            id={movie.id}
+            title={movie.title}
+            image={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
           />
         ))}
       </div>
