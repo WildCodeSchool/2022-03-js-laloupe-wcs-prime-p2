@@ -58,6 +58,15 @@ const Rated = () => {
                   src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
                   alt=""
                 />
+                <div className="movie-over-rated">
+                  <div className="contenu-rated">
+                    <p className="overview-rated">Title : {item.title}</p>
+                    <p className="vote-rated">⭐️ {item.vote_average} </p>
+                    <p className="date-rated">
+                      Date de sorti : {item.release_date}{" "}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

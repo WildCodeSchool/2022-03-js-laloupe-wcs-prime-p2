@@ -4,12 +4,12 @@
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .carousel {
-  margin-top: 50px;
+  margin-top: 0px;
 }
 .nouv {
   max-width: 100%;
@@ -17,10 +17,24 @@
   -webkit-box-reflect: below 2px
     linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
 }
-.slick-dots {
-  visibility: hidden;
-}
 h2 {
   color: #fff;
   text-shadow: 2px 2px 5px #000;
+}
+h1 {
+  margin-top: 2rem;
+  font-size: 40px;
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    margin-top: 2rem;
+    font-size: 60px;
+    color: #fff;
+  }
+  .card {
+    width: 90%;
+    margin-bottom: 40px;
+  }
 }

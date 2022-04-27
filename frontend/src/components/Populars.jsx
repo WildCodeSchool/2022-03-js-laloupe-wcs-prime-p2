@@ -58,8 +58,11 @@ const Populars = () => {
                 />
               </div>
               <div className="movie-over-popular">
-                <p className="overview">Title : {item.title}</p>
-                <p className="vote">⭐️ {item.vote_average} </p>
+                <div classNaƒme="contenu">
+                  <p className="overview">Title : {item.title}</p>
+                  <p className="vote">⭐️ {item.vote_average} </p>
+                  <p className="date">Date de sorti : {item.release_date} </p>
+                </div>
               </div>
             </div>
           </div>
