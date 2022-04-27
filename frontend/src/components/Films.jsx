@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const filmsEx = () => {
-  const { films } = parseInt(useParams().id, 10);
+  // const { films } = parseInt(useParams().id, 10);
   const [filmsDetails, setFilmsDetails] = useState();
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const filmsEx = () => {
       .then(({ data }) => data)
       .then((data) => setFilmsDetails(data.results));
   }, []);
-  console.log(filmsDetails);
+  console.warn(filmsDetails);
   return <p>HEH</p>;
 };
 
