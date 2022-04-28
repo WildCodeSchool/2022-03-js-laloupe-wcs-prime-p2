@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Modal = ({ isShowing, hide, title, id, overview, image }) =>
+const Modal = ({ isShowing, hide, title, overview, image }) =>
   isShowing
     ? ReactDOM.createPortal(
         <>

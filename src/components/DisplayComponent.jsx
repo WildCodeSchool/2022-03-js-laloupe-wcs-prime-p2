@@ -8,7 +8,7 @@ const DisplayComponent = ({ id, name, image, title, overview }) => {
       <img src={image} alt={name} />
       <figcaption>{title}</figcaption>
       <div>
-        <button className="modal-toggle" onClick={toggle}>
+        <button type="button" className="modal-toggle" onClick={toggle}>
           show modal
         </button>
         <Modal
