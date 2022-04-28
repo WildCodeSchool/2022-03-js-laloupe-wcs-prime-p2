@@ -1,6 +1,5 @@
 import "./Category.scss";
 import React from "react";
-import Movie from "./Movies";
 
 // On passe des props en plus pour permettre à l'api de reconnaitre
 // les valeurs passées vont permettre d'être rebalancés
