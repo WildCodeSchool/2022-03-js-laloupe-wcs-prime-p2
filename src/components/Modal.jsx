@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./Modal.css";
 
 const Modal = ({ isShowing, hide, title, overview, posterPath }) =>
   isShowing
@@ -13,22 +14,24 @@ const Modal = ({ isShowing, hide, title, overview, posterPath }) =>
                   backgroundImage: `url(${posterPath})`,
                 }}
               >
-                <h2 className="modal-body">{title}</h2>
-                <div className="modal-header">
-                  <p className="overview">{overview}</p>
-                  <button
-                    className="modal-close-button"
-                    type="button"
-                    onClick={hide}
-                  >
-                    <span className="close">&times;</span>
-                  </button>
+                <div className="flexprops">
+                  <h2 className="modal-body">{title}</h2>
+                  <div className="modal-header">
+                    <p className="modal-overview">{overview}</p>
+                    <button
+                      className="modal-close-button"
+                      type="button"
+                      onClick={hide}
+                    >
+                      <span className="close">&times;</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <style jsx="true">{`
+          {/* <style jsx="true">{`
             .modal-overlay {
               position: fixed;
               top: 0;
@@ -74,33 +77,42 @@ const Modal = ({ isShowing, hide, title, overview, posterPath }) =>
               background-repeat: no-repeat;
             }
 
-            .modal-header {
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              grid-template-rows: repeat(3, 100px);
+            .flexprops {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            }
+            .modal-body {
+              width: 30%;
+              margin-left: 70%;
             }
 
             .modal-close-button {
-              font-size: 1.5rem;
-              margin: 0;
-              color: #000;
-              cursor: pointer;
-              border: 1px red solid;
+              box-shadow: 0px 10 10px 10px rgba(0, 0, 0, 0.25);
+              border-radius: 10px;
               background: transparent;
+              color: aqua;
+              margin-left: 95%;
+              appearance: button;
+              font-size: 1.5rem;
+              // margin: 0;
+              // color: aqua;
+              // cursor: pointer;
+              // border: 1px aqua solid;
+              // margin-left: 95%;
             }
+
             .overview {
-              grid-column: 2/ 3;
-              grid-row: 1 / 2;
+              width: 35%;
+              margin-left: 60%;
               color: white;
             }
             .poster {
-              grid-column: 3/ 4;
-              grid-row: 1 / 4;
               overflow: hidden;
               position: absolute;
               width: 25%;
             }
-          `}</style>
+          `}</style> */}
         </>,
         document.body
       )
