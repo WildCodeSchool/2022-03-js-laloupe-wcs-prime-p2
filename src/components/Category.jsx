@@ -1,6 +1,6 @@
 import "./Category.scss";
 
-const Category = ({ name, image }) => {
+const Category = ({ image, name }) => {
   return (
     <figure className="category">
       <img className="cardimg" src={image} alt="" />
