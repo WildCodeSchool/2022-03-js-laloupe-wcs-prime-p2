@@ -1,23 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Modal = ({ isShowing, hide, title, overview, image }) =>
+const Modal = ({ isShowing, hide, title, overview, posterpath }) =>
   isShowing
     ? ReactDOM.createPortal(
         <>
           <div className="modal-overlay">
             <div className="modal-wrapper">
-              <div className="modal">
-                <div className="modal-body">{title}</div>
+              <div
+                className="modal"
+                style={{
+                  backgroundImage: `url(${posterpath})`,
+                }}
+              >
+                <h2 className="modal-body">{title}</h2>
                 <div className="modal-header">
-                  <p>{overview}</p>
-                  <img src={image} alt="name" />
+                  <p className="overview">{overview}</p>
                   <button
-                    type="button"
                     className="modal-close-button"
+                    type="button"
                     onClick={hide}
                   >
-                    <span>&times;</span>
+                    <span className="close">&times;</span>
                   </button>
                 </div>
               </div>
@@ -32,7 +36,13 @@ const Modal = ({ isShowing, hide, title, overview, image }) =>
               width: 100vw;
               height: 100vh;
               z-index: 1040;
-              background-color: rgba(0, 0, 0, 0.5);
+              // animation-delay: 3s;
+              transition: width 2s, height 2s, background-color 2s, transform 2s;
+              display: block;
+            }
+
+            .modal-overlay:hover {
+              transform: rotate3d(2, -0.5, -0.5, -0.05turn);
             }
 
             .modal-wrapper {
@@ -51,28 +61,44 @@ const Modal = ({ isShowing, hide, title, overview, image }) =>
 
             .modal {
               z-index: 100;
-              background: #fff;
               position: relative;
+              background-color: hsla(227, 99%, 7%, 0.83);
               margin: auto;
               border-radius: 5px;
-              max-width: 500px;
-              width: 80%;
+              max-width: 80%;
+              width: 50%;
+              height: 65%;
               padding: 1rem;
+              box-shadow: 5px 5px 5px 5px aqua;
+              background-size: contain;
+              background-repeat: no-repeat;
             }
 
             .modal-header {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              grid-template-rows: repeat(3, 100px);
             }
 
             .modal-close-button {
-              font-size: 1.4rem;
-              font-weight: 700;
+              font-size: 1.5rem;
+              margin: 0;
               color: #000;
               cursor: pointer;
-              border: none;
+              border: 1px red solid;
               background: transparent;
+            }
+            .overview {
+              grid-column: 2/ 3;
+              grid-row: 1 / 2;
+              color: white;
+            }
+            .poster {
+              grid-column: 3/ 4;
+              grid-row: 1 / 4;
+              overflow: hidden;
+              position: absolute;
+              width: 25%;
             }
           `}</style>
         </>,
