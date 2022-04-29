@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Modal = ({ isShowing, hide, title, overview, posterpath }) =>
+const Modal = ({ isShowing, hide, title, overview, posterPath }) =>
   isShowing
     ? ReactDOM.createPortal(
         <>
@@ -10,7 +10,7 @@ const Modal = ({ isShowing, hide, title, overview, posterpath }) =>
               <div
                 className="modal"
                 style={{
-                  backgroundImage: `url(${posterpath})`,
+                  backgroundImage: `url(${posterPath})`,
                 }}
               >
                 <h2 className="modal-body">{title}</h2>
