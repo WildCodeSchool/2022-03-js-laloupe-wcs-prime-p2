@@ -25,7 +25,7 @@ const DisplayComponent = ({
           id={id}
           title={title}
           overview={overview}
-          poster_path={image}
+          posterPath={image}
         />
       </div>
     </figure>
