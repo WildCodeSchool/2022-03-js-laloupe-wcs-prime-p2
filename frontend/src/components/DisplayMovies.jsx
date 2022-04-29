@@ -29,17 +29,14 @@ const DisplayMovies = () => {
   useEffect(() => {
     getGenres(genre);
   }, []);
-  //   // On va mapper genres.data chopper l'id
-  //   // ces données viennent du tableau en dur plus haut
-  //   // on stock les données de genresData dans genresInfos}
-  //   // On lui dit que sur un onclick avec les valeurs d'ID,
-  //   // il me récupère les valeurs par l'API qui seront remplis dynamiquement
 
   return (
     <div className="category">
       <Header />
       {genreDetails?.map((movie) => (
         <DisplayComponent
+          poster_path={movie.image}
+          overview={movie.overview}
           key={movie.id}
           id={movie.id}
           title={movie.title}

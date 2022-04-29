@@ -10,7 +10,7 @@ figure.category{
   }
 
 
-.category img {
+.cardimg {
     width: 15rem;
     height: 11rem;
     margin-top: 2rem;
@@ -21,22 +21,21 @@ figure.category{
     transition: .7s;
 
 }
-.category img:hover {
+.cardimg:hover {
   transform:scale(1.1);
 }
 
-figure.figcaption{
-  text-decoration: none;
-    color: aliceblue;
-    margin-bottom: 0;
-}
-figcaption {
+// figure figcaption{
+//   text-decoration: none;
+//     color: aliceblue;
+//     margin-bottom: 0;}
+    figcaption{
   background-color: rgb(20, 214, 214);
   border-radius: 3px;
   color: rgb(2, 0, 36);
   font: italic smaller sans-serif;
   padding:10px;
-  text-align: center;
+  // text-align: center;
 }
 
 @media screen and(max-width: 735px){
@@ -46,7 +45,7 @@ figcaption {
     margin:1.5rem;
    
   }
-  .category img {
+  .category.cardimg {
     width: 8rem;
     height: 6rem;
   
@@ -57,7 +56,5 @@ figcaption {
     margin: 0;
     transition: .5s;
 }
-figcaption{
-  text-transform: inherit;
-}
+
 }
