@@ -22,7 +22,7 @@ const DisplayMovies = () => {
       // On actualise le state avec les nouvelles valeurs récupérés
       .then((data) => {
         setGenreDetails(data.results);
-        console.log(data.results);
+        // console.log(data.results);
       });
   };
 
