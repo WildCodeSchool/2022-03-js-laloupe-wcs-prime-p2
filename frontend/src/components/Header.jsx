@@ -2,11 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "./Header.css";
+import SearchBar from "./SearchBar";
 import HomeIcons from "../assets/Home.png";
 import CatIcons from "../assets/Categories.png";
 import CoeurIcons from "../assets/Coeur.png";
 
-const Header = () => {
+const Header = ({setMovies}) => {
   return (
     <header>
       <ul className="Nav">
@@ -38,7 +39,7 @@ const Header = () => {
       <div className="logo">
         <img src={logo} alt="logo" />
       </div>
-      <input type="text" id="search" placeholder="Entrer le titre d'un film" />
+      <SearchBar setMovies={setMovies}/>
     </header>
   );
 };
