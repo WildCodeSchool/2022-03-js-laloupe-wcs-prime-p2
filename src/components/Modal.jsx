@@ -7,26 +7,22 @@ const Modal = ({ isShowing, hide, title, overview, posterPath }) =>
     ? ReactDOM.createPortal(
         <>
           <div className="modal-overlay">
-            <div className="modal-wrapper">
-              <div
-                className="modal"
-                style={{
-                  backgroundImage: `url(${posterPath})`,
-                }}
-              >
-                <div className="flexprops">
-                  <h2 className="modal-body">{title}</h2>
-                  <div className="modal-header">
-                    <p className="modal-overview">{overview}</p>
-                    <button
-                      className="modal-close-button"
-                      type="button"
-                      onClick={hide}
-                    >
-                      <span className="close">&times;</span>
-                    </button>
-                  </div>
-                </div>
+            <div
+              className="modal"
+              style={{
+                backgroundImage: `url(${posterPath})`,
+              }}
+            >
+              <div className="flexprops">
+                <h2 className="modal-body">{title}</h2>
+                <p className="modal-overview">{overview}</p>
+                <button
+                  className="modal-close-button"
+                  type="button"
+                  onClick={hide}
+                >
+                  <span className="close">&times;</span>
+                </button>
               </div>
             </div>
           </div>

@@ -12,7 +12,7 @@ const DisplayMovies = () => {
     axios
       // Appel de l'api avec un url dynamique
       .get(
-        `https://api.themoviedb.org/3/discover/movie?api_key=442e533a3f611fdf2ce32b99e46a8d6b&with_genres=${idToGet}`
+        `https://api.themoviedb.org/3/discover/movie/?api_key=442e533a3f611fdf2ce32b99e46a8d6b&with_genres=${idToGet}`
       )
 
       // suite d'appel normal axios
