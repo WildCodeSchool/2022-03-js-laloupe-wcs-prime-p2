@@ -4,13 +4,12 @@ const searchBox = (props) => {
     return (
         <div>
            <div className="search">
-        <input
-          type="text"
-          name="searchBar"
-          value={props.value}
-          placeholder="search"
-          onChange={(event) => props.setSearchValue(event.target.value)}
-        />
+           <input
+				className='form-control'
+				value={props.value}
+				onChange={(event) => props.setSearchValue(event.target.value)}
+				placeholder='Type to search...'
+			></input>
             </div>
         </div>
     );
