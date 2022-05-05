@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const AddFavourites = () => {
   return (
     <div>
