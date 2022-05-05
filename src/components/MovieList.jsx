@@ -1,17 +1,20 @@
 import React from "react";
 import AddFavourites from "./AddFavourites";
+import "./MovieList.scss";
 
 const MovieList = (props) => {
-  const FavouriteComponent= props.FavouriteComponent;
+  const FavouriteComponent = props.FavouriteComponent;
   return (
     <>
       {props.movies.map((movie, index) => (
-        <div className="image-containe">
+        <div className="image-container">
           <img
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             alt="movie"
           ></img>
-          <div onClick={() => props.handleFavouritesClick(movie)}>On Click</div>
+          <button onClick={() => props.handleFavouritesClick(movie)}>
+            Add Favourites
+          </button>
           {FavouriteComponent}
         </div>
       ))}
