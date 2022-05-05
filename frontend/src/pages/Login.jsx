@@ -52,7 +52,7 @@ function Login() {
     <div className="log-reg">
       <div className="registration">
         <h1>Registration</h1>
-        <label htmlFor="username">username</label>
+        <label htmlFor="username">Enter an username</label>
         <input
           type="text"
           id="username"
@@ -60,7 +60,7 @@ function Login() {
             setUsernameReg(e.target.value);
           }}
         />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Choice a password</label>
         <input
           type="text"
           ide="password"
@@ -76,14 +76,14 @@ function Login() {
         <h1>Login</h1>
         <input
           type="text"
-          placeholder="Username..."
+          placeholder="Your username..."
           onChange={(e) => {
             setUsername(e.target.value);
           }}
         />
         <input
           type="password"
-          placeholder="Password..."
+          placeholder="your password..."
           onChange={(e) => {
             setPassword(e.target.value);
           }}
@@ -92,7 +92,7 @@ function Login() {
           Login
         </button>
       </div>
-      <h1>{loginStatus}</h1>
+      <h1>{loginStatus ? `Welcome ${loginStatus}` : "Login please..."}</h1>
     </div>
   );
 }

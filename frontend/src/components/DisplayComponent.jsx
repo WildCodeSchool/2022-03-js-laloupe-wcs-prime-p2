@@ -13,7 +13,7 @@ const DisplayComponent = ({ id, name, image, title, overview, vote, date }) => {
       <figcaption className="contenu">
         {title}
 
-        <p className="vote" style={{ color: vote >= 7 ? "green" : "orange" }}>
+        <p className="vote" style={{ color: vote >= 6.5 ? "green" : "red" }}>
           ⭐️ {vote}
         </p>
         <p className="date">Release date : {date} </p>
