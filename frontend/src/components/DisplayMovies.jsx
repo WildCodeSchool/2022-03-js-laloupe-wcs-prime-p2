@@ -34,7 +34,6 @@ const DisplayMovies = () => {
   return (
     <div className="category">
       <Header movies={movies} setMovies={setMovies} />
-      <CustomPagination setPage={setPage} />
 
       {genreDetails?.map((movie) => (
         <DisplayComponent
@@ -46,6 +45,7 @@ const DisplayMovies = () => {
           image={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
         />
       ))}
+      <CustomPagination setPage={setPage} />
     </div>
   );
 };

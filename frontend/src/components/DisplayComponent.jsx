@@ -12,7 +12,7 @@ const DisplayComponent = ({
 }) => {
   const { isShowing, toggle } = useModal();
   return (
-    <div>
+    <>
       <figure className="category" key={id}>
         <div onClick={toggle} onKeyDown={toggle} role="button" tabIndex={0}>
           <img src={image} alt={name} key={id} />
@@ -32,7 +32,7 @@ const DisplayComponent = ({
         </div>
       </figure>
       {/* <CustomPagination /> */}
-    </div>
+    </>
   );
 };
 
