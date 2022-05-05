@@ -12,7 +12,7 @@ const CustomPagination = ({ setPage, numberOfPages = 10 }) => {
         width: "100%",
         display: "flex",
         justifyContent: "center",
-        marginTop: 10,
+        marginTop: 50,
       }}
     >
       <Pagination
