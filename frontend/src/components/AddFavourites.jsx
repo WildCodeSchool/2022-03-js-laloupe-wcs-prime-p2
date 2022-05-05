@@ -1,15 +1,12 @@
-import React from 'react';
+import React from "react";
 
 
 const AddFavourites = () => {
-  
-    return (
-       <>
-     <span className='Add Favourite'>Add to Favourites </span>
-     
-     
-       </>
-    );
+  return (
+    <div>
+      <span className="Add Favourite">Add to Favourites</span>
+    </div>
+  );
 };
 
 export default AddFavourites;

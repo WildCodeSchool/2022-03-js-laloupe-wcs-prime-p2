@@ -63,7 +63,7 @@ const Rated = () => {
                     <p className="overview-rated">Title : {item.title}</p>
                     <p className="vote-rated">⭐️ {item.vote_average} </p>
                     <p className="date-rated">
-                      Date de sorti : {item.release_date}{" "}
+                      Release Date : {item.release_date}{" "}
                     </p>
                   </div>
                 </div>
