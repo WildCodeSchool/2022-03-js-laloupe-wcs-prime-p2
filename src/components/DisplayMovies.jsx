@@ -34,7 +34,6 @@ const DisplayMovies = () => {
   return (
     <div className="category">
       <Header movies={movies} setMovies={setMovies} />
-      <CustomPagination setPage={setPage} />
 
       {genreDetails?.map((movie) => (
         <DisplayComponent
@@ -48,6 +47,7 @@ const DisplayMovies = () => {
           date={movie.release_date}
         />
       ))}
+      <CustomPagination setPage={setPage} />
     </div>
   );
 };

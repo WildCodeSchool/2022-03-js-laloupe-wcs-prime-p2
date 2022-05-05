@@ -121,7 +121,7 @@ function Categories() {
     setFavourites(newFavouriteList);
   };
   return (
-    <div>
+    <>
       <Header setMovies={setMovies} />
       {!movies.length &&
         !favourites.length &&
@@ -148,7 +148,7 @@ function Categories() {
           favouriteComponent={<RemoveFavourites />}
         />
       )}
-    </div>
+    </>
   );
 }
 
