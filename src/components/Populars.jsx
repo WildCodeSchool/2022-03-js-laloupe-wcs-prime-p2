@@ -61,7 +61,7 @@ const Populars = () => {
                 <div className="contenu">
                   <p className="overview">Title : {item.title}</p>
                   <p className="vote">⭐️ {item.vote_average} </p>
-                  <p className="date">Date de sorti : {item.release_date} </p>
+                  <p className="date">Release date : {item.release_date} </p>
                 </div>
               </div>
             </div>
