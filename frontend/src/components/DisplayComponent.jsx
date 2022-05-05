@@ -3,10 +3,9 @@ import useModal from "./UseModal";
 import "./DisplayComponent.css";
 // import CustomPagination from "./CustomPaginition";
 
-const DisplayComponent = ({ id, name, image, title, overview, vote, date }) => {
+const DisplayComponent = ({ id, name, image, title, overview }) => {
   const { isShowing, toggle } = useModal();
   return (
-
     <>
       <figure className="category" key={id}>
         <div onClick={toggle} onKeyDown={toggle} role="button" tabIndex={0}>
@@ -28,7 +27,7 @@ const DisplayComponent = ({ id, name, image, title, overview, vote, date }) => {
       </figure>
       {/* <CustomPagination /> */}
     </>
-
+  );
 };
 
 export default DisplayComponent;
