@@ -1,0 +1,16 @@
+.image-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  
+}
+.image-container > img {
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+  width: 100 px;
+}
+
+.image-container > button {
+  display: flex;
+}
