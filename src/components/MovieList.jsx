@@ -1,17 +1,22 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
-import AddFavourites from "./AddFavourites";
 
-const MovieList = (props) => {
-  const FavouriteComponent= props.FavouriteComponent;
+const MovieList = ({ movies, FavouriteComponent }) => {
   return (
     <>
-      {props.movies.map((movie, index) => (
-        <div className="image-containe">
+      {movies.map((movie) => (
+        <div key={movie.id} className="image-containe">
           <img
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             alt="movie"
-          ></img>
-          <div onClick={() => props.handleFavouritesClick(movie)}>On Click</div>
+          />
+          <div
+            onClick={() => movies.handleFavouritesClick(movie)}
+            role="button"
+            tabIndex="0"
+          >
+            On Click
+          </div>
           {FavouriteComponent}
         </div>
       ))}
