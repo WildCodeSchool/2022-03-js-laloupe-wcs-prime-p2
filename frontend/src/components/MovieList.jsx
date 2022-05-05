@@ -3,7 +3,7 @@ import React from "react";
 
 const MovieList = ({ movies, FavouriteComponent }) => {
   return (
-    <>
+    <div>
       {movies.map((movie) => (
         <div key={movie.id} className="image-containe">
           <img
@@ -20,7 +20,7 @@ const MovieList = ({ movies, FavouriteComponent }) => {
           {FavouriteComponent}
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
