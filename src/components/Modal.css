@@ -13,6 +13,14 @@
   align-items: center;
 }
 
+
+.close {
+  color: blue;
+  width: 29px;
+  font-weight: bold;
+}
+
+
 .modal {
   z-index: 100;
   position: relative;
@@ -38,6 +46,11 @@
   /* width: 50%; */
 }
 
+
+.modal-date {
+  color: white;
+}
+
 .modal-close-button {
   color: #14396a !important;
   width: 2rem;
@@ -49,6 +62,9 @@
   border: 2px solid #3866a3;
   background: #63b8ee;
   background: linear-gradient(to top, #63b8ee, #468ccf);
+  display: flex;
+  justify-content: center;
+
 }
 .modal-close-button:hover {
   color: #14396a !important;
