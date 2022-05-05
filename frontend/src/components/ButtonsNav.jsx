@@ -9,19 +9,19 @@ export default function ButtonNav() {
     <div>
       <ul className="ButtonsNav">
         <Link to="/">
-          <li>
+          <li className="btn-nav">
             <img className="imgFooter" src={HomeIcons} alt="Home Icons" />
             <p className="nav">Home</p>
           </li>
         </Link>
         <Link to="/Categories">
-          <li>
+          <li className="btn-nav">
             <img className="imgFooter" src={CatIcons} alt="Categories Icons" />
             <p className="nav">Genres</p>
           </li>
         </Link>
         <Link to="/CoupDeCoeur">
-          <li>
+          <li className="btn-nav">
             <img className="imgFooter" src={CoeurIcons} alt="Coup de coeur" />
             <p className="nav">Favorite</p>
           </li>

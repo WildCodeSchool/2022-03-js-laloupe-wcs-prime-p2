@@ -1,6 +1,10 @@
 import Category from "@components/Category";
 import Header from "@components/Header";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import MovieList from "@components/MovieList";
+import AddFavourites from "@components/AddFavourites";
+import RemoveFavourites from "@components/RemoveFavorites";
 
 const genresData = [
   {
@@ -101,18 +105,49 @@ const genresData = [
 ];
 
 function Categories() {
+  const [movies, setMovies] = useState([]);
+  const [favourites, setFavourites] = useState([]);
+
+  const addFavouriteMovie = (movie) => {
+    const newFavoriteList = [...favourites, movie];
+    setFavourites(newFavoriteList);
+  };
+
+  const removeFavouriteMovie = (movie) => {
+    const newFavouriteList = favourites.filter(
+      (favourite) => favourite.id !== movie.id
+    );
+
+    setFavourites(newFavouriteList);
+  };
   return (
     <div>
-      <Header />
-      {genresData.map((genreInfos) => (
-        <Link to={`/Categories/${genreInfos.id}`} key={genreInfos.id}>
-          <Category
-            key={genreInfos.id}
-            name={genreInfos.name}
-            image={genreInfos.image}
-          />
-        </Link>
-      ))}
+      <Header setMovies={setMovies} />
+      {!movies.length &&
+        !favourites.length &&
+        genresData.map((genreInfos) => (
+          <Link to={`/Categories/${genreInfos.id}`} key={genreInfos.id}>
+            <Category
+              key={genreInfos.id}
+              name={genreInfos.name}
+              image={genreInfos.image}
+            />
+          </Link>
+        ))}
+      {movies.length && (
+        <MovieList
+          movies={movies}
+          favouriteComponent={<AddFavourites />}
+          handleFavouritesClick={addFavouriteMovie}
+        />
+      )}
+      {favourites.length && (
+        <MovieList
+          movies={favourites}
+          handleFavouritesClick={removeFavouriteMovie}
+          favouriteComponent={<RemoveFavourites />}
+        />
+      )}
     </div>
   );
 }
