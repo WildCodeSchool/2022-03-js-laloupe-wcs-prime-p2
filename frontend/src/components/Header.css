@@ -5,9 +5,8 @@ header {
   padding: 0;
   flex-direction: column;
 }
-.Nav{
+.Nav {
   display: none;
-
 }
 
 .logo {
@@ -20,12 +19,9 @@ header {
 }
 
 .logo img {
-  width : 150px;
-  
-
+  width: 150px;
 }
 #search {
-  
   width: 60vw;
   height: 35px;
   border-radius: 50px;
@@ -35,7 +31,6 @@ header {
   .logo img {
     margin-top: 50px;
     width: 25%;
-    
   }
   #search {
     margin-top: 40px;
@@ -44,7 +39,7 @@ header {
     border-radius: 50px;
     background-color: aqua;
   }
-  .Nav{
+  .Nav {
     margin-top: 0;
     display: flex;
     justify-content: space-evenly;
@@ -52,20 +47,18 @@ header {
     padding: 0;
     padding-top: 0.5rem;
     justify-content: left;
-
   }
-  .Nav li{
+  .Nav li {
     background: none;
     display: flex;
     align-items: center;
     margin: 0;
   }
-  .navigation{
+  .navigation {
     color: white;
     font-size: 20px;
- 
   }
-  .upcoming{
+  .upcoming {
     margin-top: 12rem;
   }
 }
