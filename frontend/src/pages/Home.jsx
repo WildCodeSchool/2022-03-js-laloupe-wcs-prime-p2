@@ -6,6 +6,7 @@ import Rated from "@components/rated";
 import MovieList from "@components/MovieList";
 import AddFavourites from "@components/AddFavourites";
 import RemoveFavourites from "@components/RemoveFavorites";
+import SearchBar from "@components/SearchBar";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -25,14 +26,15 @@ const Home = () => {
   };
 
   return (
-    <>
-      <Header setMovies={setMovies} />
-      {(!movies.length && !favourites.length) && (
-        <>
+    <div>
+      <Header />
+      <SearchBar setMovies={setMovies} />
+      {!movies.length && !favourites.length && (
+        <div>
           <Carousels />
           <Populars />
           <Rated />
-        </>
+        </div>
       )}
       {movies.length && (
         <MovieList
@@ -48,7 +50,7 @@ const Home = () => {
           favouriteComponent={<RemoveFavourites />}
         />
       )}
-    </>
+    </div>
   );
 };
 
