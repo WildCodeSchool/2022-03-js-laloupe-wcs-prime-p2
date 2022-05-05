@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <>
       <Header setMovies={setMovies} />
-      {(!movies.length && !favourites.length) && (
+      {!movies.length && !favourites.length && (
         <>
           <Carousels />
           <Populars />
