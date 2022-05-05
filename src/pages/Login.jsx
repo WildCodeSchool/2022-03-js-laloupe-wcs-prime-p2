@@ -1,14 +1,22 @@
-/* eslint-disable */
-import { useState } from "react";
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import { useState, useEffect } from "react";
 import axios from "axios";
+import "./Login.css";
 
 function Login() {
   const [usernameReg, setUsernameReg] = useState("");
   const [passwordReg, setPasswordReg] = useState("");
 
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [loginStatus, setLoginStatus] = useState("");
+
+  axios.defaults.withCredentials = true;
+
   const register = () => {
     axios
-      .post("http://localhost:3001/Login", {
+      .post("http://localhost:8000/register", {
         username: usernameReg,
         password: passwordReg,
       })
@@ -16,21 +24,46 @@ function Login() {
         console.warn(response);
       });
   };
+  const login = () => {
+    axios
+      .post("http://localhost:8000/login", {
+        username,
+        password,
+      })
+      .then((response) => {
+        if (response.data.message) {
+          setLoginStatus(response.data.message);
+        } else {
+          setLoginStatus(response.data[0].username);
+        }
+      });
+  };
+
+  useEffect(() => {
+    axios.get("http://localhost:8000/login").then((response) => {
+      // console.warn(response);
+      if (response.data.loggedIn === true) {
+        setLoginStatus(response.data.user[0].username);
+      }
+    });
+  }, []);
 
   return (
-    <div>
-      <div>
-        <h1>Register</h1>
-        <label htmlFor="text">Username</label>
+    <div className="log-reg">
+      <div className="registration">
+        <h1>Registration</h1>
+        <label htmlFor="username">username</label>
         <input
           type="text"
+          id="username"
           onChange={(e) => {
             setUsernameReg(e.target.value);
           }}
         />
-        <label htmlFor="text">Password</label>
+        <label htmlFor="password">Password</label>
         <input
           type="text"
+          ide="password"
           onChange={(e) => {
             setPasswordReg(e.target.value);
           }}
@@ -39,14 +72,28 @@ function Login() {
           Register
         </button>
       </div>
-      <div>
+      <div className="login">
         <h1>Login</h1>
-        <input type="text" placeholder="Username..." />
-        <input type="text" placeholder="Password..." />
-        <button type="button">Register</button>
+        <input
+          type="text"
+          placeholder="Username..."
+          onChange={(e) => {
+            setUsername(e.target.value);
+          }}
+        />
+        <input
+          type="password"
+          placeholder="Password..."
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+        />
+        <button type="button" onClick={login}>
+          Login
+        </button>
       </div>
+      <h1>{loginStatus}</h1>
     </div>
   );
 }
-
 export default Login;

@@ -6,7 +6,6 @@ import Rated from "@components/rated";
 import MovieList from "@components/MovieList";
 import AddFavourites from "@components/AddFavourites";
 import RemoveFavourites from "@components/RemoveFavorites";
-import SearchBar from "@components/SearchBar";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -27,8 +26,7 @@ const Home = () => {
 
   return (
     <div>
-      <Header />
-      <SearchBar setMovies={setMovies} />
+      <Header setMovies={setMovies} />
       {!movies.length && !favourites.length && (
         <div>
           <Carousels />

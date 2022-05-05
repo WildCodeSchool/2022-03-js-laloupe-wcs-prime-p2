@@ -5,8 +5,9 @@ import "./Header.css";
 import HomeIcons from "../assets/Home.png";
 import CatIcons from "../assets/Categories.png";
 import CoeurIcons from "../assets/Coeur.png";
+import SearchBar from "./SearchBar";
 
-const Header = () => {
+const Header = ({ setMovies }) => {
   return (
     <header>
       <ul className="Nav">
@@ -38,6 +39,7 @@ const Header = () => {
       <div className="logo">
         <img src={logo} alt="logo" />
       </div>
+      <SearchBar setMovies={setMovies} />
     </header>
   );
 };
