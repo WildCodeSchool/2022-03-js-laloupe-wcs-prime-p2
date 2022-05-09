@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import SearchBox from "./SearchBox";
 
@@ -10,11 +11,11 @@ const SearchBar = ({ setMovies }) => {
   const getMovieRequest = async () => {
     const url = `https:api.themoviedb.org/3/search/movie?api_key=37c6f95d37566ae6e16181a80c84a1e9&language=en-US&query=${searchValue}`;
 
-    const response = await fetch(url);
-    const responseJson = await response.json();
+    const response = await axios.get(url);
+    const { data } = response;
 
-    if (responseJson.results) {
-      setMovies(responseJson.results);
+    if (data.results) {
+      setMovies(data.results);
     }
   };
 
