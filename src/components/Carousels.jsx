@@ -53,7 +53,7 @@ const Carousels = () => {
   }, []);
   return (
     <>
-      <h1>Upcomming films</h1>
+      <h1 className="upcoming">Upcoming films</h1>
       <Slider {...settings}>
         {image.map((item) => (
           <div key={`carousel-${item.id}`} className="carousel">

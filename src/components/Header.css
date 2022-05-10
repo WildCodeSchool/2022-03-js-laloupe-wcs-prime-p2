@@ -1,12 +1,14 @@
 header {
-  height: 100px;
   width: auto;
   margin-bottom: 7vh;
   padding: 0;
   flex-direction: column;
 }
+.Nav {
+  display: none;
+}
 
-.logo {
+.logo2 {
   display: flex;
   justify-content: center;
   height: 100%;
@@ -14,9 +16,11 @@ header {
   flex-direction: column;
   align-items: center;
 }
-.logo img {
-  width: 150px;
-  height: 150px;
+
+.logo2 img {
+  width: 100px;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 #search {
   width: 60vw;
@@ -25,10 +29,45 @@ header {
   background-color: aqua;
 }
 @media screen and (min-width: 1024px) {
+  header {
+    height: 100px;
+    width: auto;
+    margin-bottom: 15vh;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .logo img {
+    margin-top: 50px;
+    width: 25%;
+  }
   #search {
+    margin-top: 40px;
     width: 40vw;
     height: 35px;
     border-radius: 50px;
     background-color: aqua;
+  }
+  .Nav {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    padding: 0;
+    padding-top: 0.5rem;
+    justify-content: left;
+  }
+  .Nav li {
+    background: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  .navigation {
+    color: white;
+    font-size: 20px;
+  }
+  .upcoming {
+    margin-top: 12rem;
   }
 }
