@@ -1,5 +1,4 @@
 header {
-  height: 100px;
   width: auto;
   margin-bottom: 7vh;
   padding: 0;
@@ -9,7 +8,7 @@ header {
   display: none;
 }
 
-.logo {
+.logo2 {
   display: flex;
   justify-content: center;
   height: 100%;
@@ -18,8 +17,10 @@ header {
   align-items: center;
 }
 
-.logo img {
-  width: 150px;
+.logo2 img {
+  width: 100px;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 #search {
   width: 60vw;
@@ -29,9 +30,7 @@ header {
 }
 @media screen and (min-width: 1024px) {
   header {
-    height: 100px;
     width: auto;
-    margin-bottom: 15vh;
     padding: 0;
     flex-direction: column;
   }
@@ -65,8 +64,5 @@ header {
   .navigation {
     color: white;
     font-size: 20px;
-  }
-  .upcoming {
-    margin-top: 12rem;
   }
 }

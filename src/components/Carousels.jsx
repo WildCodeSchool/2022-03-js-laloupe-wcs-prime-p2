@@ -62,7 +62,7 @@ const Carousels = () => {
                 <img
                   className="nouv"
                   src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
-                  alt=""
+                  alt={item.original_title}
                 />
                 <h2>{item.original_title}</h2>
               </div>
