@@ -45,6 +45,15 @@ h2 {
   padding: 5px;
 }
 
+/* coup de coeur */
+.heartImg {
+  display: flex;
+  padding: 7px;
+  height: 15px;
+  width: 15px;
+  float: right;
+}
+
 @media screen and (min-width: 1024px) {
   .card-popular {
     transition: 0.5s ease;

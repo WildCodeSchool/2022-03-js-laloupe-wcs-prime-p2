@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo2.png";
 import "./Header.css";
 import HomeIcons from "../assets/Home.png";
 import CatIcons from "../assets/Categories.png";
@@ -36,10 +36,8 @@ const Header = ({ setMovies }) => {
           </li>
         </Link>
       </ul>
-      <div className="logo">
-        <Link to="/">
-          <img src={logo} alt="logo" />
-        </Link>
+      <div className="logo2">
+        <img src={logo} alt="logo2" />
       </div>
 
       <SearchBar setMovies={setMovies} />
