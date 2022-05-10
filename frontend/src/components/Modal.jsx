@@ -7,18 +7,20 @@ const Modal = ({ isShowing, hide, title, overview, posterPath, vote, date }) =>
     ? ReactDOM.createPortal(
         <>
           <div className="modal-overlay">
-            <div
+            {/* <div
               className="modal"
               style={{
                 backgroundImage: `url(${posterPath})`,
-              }}
             >
-              <div className="flexprops">
-                <h2 className="modal-body">{title}</h2>
+              }} */}
+            <img className="modalimg" src={posterPath} alt="a" />
+            <div className="flexprops">
+              <h2 className="modal-body">{title}</h2>
 
-                <p className="modal-overview">{overview}</p>
+              <p className="modal-overview">{overview}</p>
+              <div className="flexbot">
                 <span style={{ color: vote >= 7 ? "green" : "orange" }}>
-                  ⭐️{vote}
+                  ⭐️ {vote}
                 </span>
                 <p className="modal-date">Release date : {date}</p>
                 <button
@@ -26,7 +28,7 @@ const Modal = ({ isShowing, hide, title, overview, posterPath, vote, date }) =>
                   type="button"
                   onClick={hide}
                 >
-                  <span className="close">X</span>
+                  X
                 </button>
               </div>
             </div>
