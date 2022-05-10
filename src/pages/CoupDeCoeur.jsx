@@ -10,7 +10,7 @@ const UserList = () => {
     : [];
 
   useEffect(() => {
-    for (let i = 0; i < moviesId.length; i++) {
+    for (let i = 0; i < moviesId.length; i) {
       axios
         .get(
           `https://api.themoviedb.org/3/movie/${moviesId[i]}?api_key=94b0467408dc50f0db83378d241839d5`
