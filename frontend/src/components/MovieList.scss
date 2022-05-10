@@ -1,15 +1,30 @@
 .image-container {
-  box-sizing: border-box;
+  
+  display: flex;
+  width: 20em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  
+}
+.img {
   display: flex;
   justify-content: center;
-}
-.image-container > img {
-  display: flex;
+  align-items: center;
   flex-direction: row;
-  height: 500px;
-  width: 100 px;
+  height: 85%;
+   width: 100vw;
 }
 
-.image-container > button {
-  display: flex;
+@media screen and(min-width: 1024px) {
+  .image-container {
+    display:inline-flex ;
+    flex-direction: row;
+    margin-left: 1em;
+  margin-right: 1em ;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  
+  }
 }
