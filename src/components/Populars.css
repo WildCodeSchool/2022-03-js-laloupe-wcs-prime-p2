@@ -62,7 +62,7 @@ h2 {
   }
   .card-popular:hover {
     transition: 0.7s ease;
-    transition-delay: 1s, 250ms;
+    transition-delay: 250ms;
     transform: scale(1.5, 1.5);
     z-index: 2000;
     position: relative;
@@ -99,5 +99,8 @@ h2 {
   }
   slick-dots li.slick-active button::before {
     color: aqua;
+  }
+  .cc{
+    float: right;
   }
 }
