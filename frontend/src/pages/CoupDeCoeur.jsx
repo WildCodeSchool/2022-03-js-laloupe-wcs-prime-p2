@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
+import "@components/CoupDeCoeur.css";
 
 const UserList = () => {
   const [listData, setListData] = useState([]);
@@ -10,7 +11,8 @@ const UserList = () => {
     : [];
 
   useEffect(() => {
-    for (let i = 0; i < moviesId.length; i) {
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < moviesId.length; i++) {
       axios
         .get(
           `https://api.themoviedb.org/3/movie/${moviesId[i]}?api_key=94b0467408dc50f0db83378d241839d5`
@@ -34,13 +36,13 @@ const UserList = () => {
 
   return (
     <div>
-      <Header />
+      <Header setMovies={setListData} />
       <div>
-        <h1>coup de coeur</h1>
+        <h1>Wishlist</h1>
         <div className="body_deco">
           {listData ? (
             listData.map((movie) => (
-              <figure className="category">
+              <figure key={movie.id} className="category">
                 <img
                   alt=""
                   src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
@@ -55,13 +57,13 @@ const UserList = () => {
                       // window.location.reload();
                     }}
                   >
-                    Supprimer de la liste
+                    Delete
                   </button>
                 </figcaption>
               </figure>
             ))
           ) : (
-            <h2>Aucun coup de coeur pour le moment</h2>
+            <h2>Nothing</h2>
           )}
         </div>
       </div>

@@ -78,7 +78,7 @@ const Populars = () => {
                     type="button"
                     onClick={() => addStorage(item.id)}
                   >
-                    Ajouter aux coups de coeur
+                    Like
                   </button>
                   <p className="overview">Title : {item.title}</p>
                   <p className="vote">⭐️ {item.vote_average} </p>

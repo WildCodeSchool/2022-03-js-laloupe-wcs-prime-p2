@@ -31,9 +31,7 @@ header {
 }
 @media screen and (min-width: 1024px) {
   header {
-    height: 100px;
     width: auto;
-    margin-bottom: 15vh;
     padding: 0;
     flex-direction: column;
   }
@@ -66,8 +64,5 @@ header {
   .navigation {
     color: white;
     font-size: 20px;
-  }
-  .upcoming {
-    margin-top: 12rem;
   }
 }
