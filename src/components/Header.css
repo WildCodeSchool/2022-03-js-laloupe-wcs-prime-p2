@@ -8,7 +8,7 @@ header {
   display: none;
 }
 
-.logo {
+.logo2 {
   display: flex;
   justify-content: center;
   height: 100%;
@@ -17,8 +17,10 @@ header {
   align-items: center;
 }
 
-.logo img {
-  width: 150px;
+.logo2 img {
+  width: 100px;
+  margin-top: 1em;
+  margin-bottom: 1em ;
 }
 #search {
   width: 60vw;
