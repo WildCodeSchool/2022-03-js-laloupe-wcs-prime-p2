@@ -1,22 +1,23 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-import React from "react";
+/* eslint-disable */
 
 const MovieList = ({ movies, FavouriteComponent }) => {
   return (
     <div>
       {movies.map((movie) => (
-        <div key={movie.id} className="image-containe">
-          <img
-            src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-            alt="movie"
-          />
+        <div key={movie.id} className="image-container">
+          {/* {console.log(movie)} */}
+
+          {movie.poster_path && (
+            <img
+              src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+              alt="movie"
+            />
+          )}
           <div
-            onClick={() => movies.handleFavouritesClick(movie)}
             role="button"
             tabIndex="0"
-          >
-            On Click
-          </div>
+            onClick={() => movie.handleFavouritesClick(movie)}
+          />
           {FavouriteComponent}
         </div>
       ))}
