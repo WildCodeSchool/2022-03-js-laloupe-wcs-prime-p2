@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import SearchBox from "./SearchBox";
 
 const SearchBar = ({ setMovies }) => {
-  // const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   // const [favourites, setFavourites] = useState([]);
 
