@@ -5,6 +5,7 @@ header {
   padding: 0;
   flex-direction: column;
 }
+
 .Nav {
   display: none;
 }
@@ -37,8 +38,7 @@ header {
   }
 
   .logo img {
-    margin-top: 50px;
-    width: 25%;
+    width: 70%;
   }
   #search {
     margin-top: 40px;
