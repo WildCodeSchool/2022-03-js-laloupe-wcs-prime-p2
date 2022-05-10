@@ -71,7 +71,7 @@ const Populars = () => {
                 />
               </div>
               <div className="movie-over-popular">
-                <div classNaƒme="contenu">
+                <div className="contenu">
                   {/* coup de coeur */}
                   <button
                     className="cc"
