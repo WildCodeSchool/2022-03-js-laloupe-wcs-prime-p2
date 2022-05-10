@@ -1,4 +1,5 @@
 /* eslint-disable */
+import "./MovieList.scss"
 
 const MovieList = ({ movies, FavouriteComponent }) => {
   return (
