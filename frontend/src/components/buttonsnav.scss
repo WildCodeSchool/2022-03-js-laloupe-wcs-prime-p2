@@ -1,4 +1,4 @@
-ul {
+.ButtonsNav {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -6,7 +6,7 @@ ul {
   margin: 0;
 }
 
-li {
+.btn-nav {
   display: flex;
   align-items: center;
   background-color: rgb(54, 55, 68);

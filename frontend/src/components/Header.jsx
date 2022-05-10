@@ -1,14 +1,45 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo2.png";
 import "./Header.css";
+import HomeIcons from "../assets/Home.png";
+import CatIcons from "../assets/Categories.png";
+import CoeurIcons from "../assets/Coeur.png";
+import SearchBar from "./SearchBar";
 
-const Header = () => {
+const Header = ({ setMovies }) => {
   return (
     <header>
-      <div className="logo">
-        <img src={logo} alt="logo" />
+      <ul className="Nav">
+        <Link to="/">
+          <li className="home">
+            <img className="imgFooter" src={HomeIcons} alt="Home Icons" />
+            <p className="navigation">
+              <span>Home</span>
+            </p>
+          </li>
+        </Link>
+        <Link to="/Categories">
+          <li className="cat">
+            <img className="imgFooter" src={CatIcons} alt="Categories Icons" />
+            <p className="navigation">
+              <span>Genres</span>
+            </p>
+          </li>
+        </Link>
+        <Link to="/CoupDeCoeur">
+          <li className="coup-de-coeur">
+            <img className="imgFooter" src={CoeurIcons} alt="Coup de coeur" />
+            <p className="navigation">
+              <span>Favorite</span>
+            </p>
+          </li>
+        </Link>
+      </ul>
+      <div className="logo2">
+        <img src={logo} alt="logo2" />
       </div>
-      <input type="text" id="search" placeholder="Entrer le titre d'un film" />
+      <SearchBar setMovies={setMovies} />
     </header>
   );
 };

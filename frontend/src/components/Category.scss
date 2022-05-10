@@ -1,12 +1,27 @@
-figure.category {
-  display: inline-block;
-  width: 22rem;
-  height: 18rem;
-  margin: 0.5rem;
-  margin-top: 5rem;
+.catégorie {
+  margin-top: 10rem;
+}
+.catégory {
+  display: flex;
 }
 
 .category img {
+  cursor: pointer;
+}
+.category :hover {
+  transform: scale(1.01);
+}
+
+figure.category {
+  display: inline-block;
+  width: 15rem;
+  height: 18rem;
+  margin: 0.5rem;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+}
+
+.cardimg {
   width: 15rem;
   height: 11rem;
   margin-top: 2rem;
@@ -16,22 +31,16 @@ figure.category {
   text-align: center;
   transition: 0.7s;
 }
-.category img:hover {
+.cardimg:hover {
   transform: scale(1.1);
 }
 
-figure.figcaption {
-  text-decoration: none;
-  color: aliceblue;
-  margin-bottom: 0;
-}
 figcaption {
   background-color: rgb(20, 214, 214);
   border-radius: 3px;
   color: rgb(2, 0, 36);
   font: italic smaller sans-serif;
   padding: 10px;
-  text-align: center;
 }
 
 @media screen and(max-width: 735px) {
@@ -40,7 +49,7 @@ figcaption {
     height: 35%;
     margin: 1.5rem;
   }
-  .category img {
+  .category.cardimg {
     width: 8rem;
     height: 6rem;
 
@@ -50,8 +59,5 @@ figcaption {
     text-align: center;
     margin: 0;
     transition: 0.5s;
-  }
-  figcaption {
-    text-transform: inherit;
   }
 }
