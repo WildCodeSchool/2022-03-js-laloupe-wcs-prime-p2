@@ -26,6 +26,19 @@ const Populars = () => {
     ],
   };
 
+  // coup de coeur
+
+  const addStorage = (id) => {
+    const storedData = window.localStorage.id
+      ? window.localStorage.id.split(",")
+      : [];
+
+    if (!storedData.includes(id.toString())) {
+      storedData.push(id);
+      window.localStorage.id = storedData;
+    }
+  };
+
   const [popular, setPopular] = useState([]);
   const getPopular = () => {
     axios
@@ -58,7 +71,15 @@ const Populars = () => {
                 />
               </div>
               <div className="movie-over-popular">
-                <div className="contenu">
+                <div classNaƒme="contenu">
+                  {/* coup de coeur */}
+                  <button
+                    className="cc"
+                    type="button"
+                    onClick={() => addStorage(item.id)}
+                  >
+                    Ajouter aux coups de coeur
+                  </button>
                   <p className="overview">Title : {item.title}</p>
                   <p className="vote">⭐️ {item.vote_average} </p>
                   <p className="date">Release date : {item.release_date} </p>
