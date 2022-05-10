@@ -71,14 +71,14 @@ const Populars = () => {
                 />
               </div>
               <div className="movie-over-popular">
-                <div classNaƒme="contenu">
+                <div className="contenu">
                   {/* coup de coeur */}
                   <button
                     className="cc"
                     type="button"
                     onClick={() => addStorage(item.id)}
                   >
-                    Ajouter aux coups de coeur
+                    Like
                   </button>
                   <p className="overview">Title : {item.title}</p>
                   <p className="vote">⭐️ {item.vote_average} </p>
