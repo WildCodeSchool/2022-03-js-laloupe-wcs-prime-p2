@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Header from "../components/Header";
 // eslint-disable-next-line import/no-unresolved
 import "@components/CoupDeCoeur.css";
 // eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/order
 import MovieList from "@components/MovieList";
-import Header from "../components/Header";
 
 const UserList = () => {
   const [movies, setMovies] = useState([]);
@@ -53,17 +54,19 @@ const UserList = () => {
                   src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                 />
                 <figcaption className="title">
-                  <button
-                    type="button"
-                    className="cc"
-                    onClick={() => {
-                      deleteStorage(movie.id);
-                      window.location.reload();
-                    }}
-                  >
-                    Delete
-                  </button>
-                  <h2 className="title-cc">{movie.title}</h2>
+                  <h2>{movie.title}</h2>
+                  <div className="cont-cc">
+                    <button
+                      type="button"
+                      className="cc"
+                      onClick={() => {
+                        deleteStorage(movie.id);
+                        // window.location.reload();
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </figcaption>
               </figure>
             ))
