@@ -48,7 +48,7 @@ const Rated = () => {
   }, []);
   return (
     <div className="rate">
-      <h2 className="rated-title">Les mieux notés</h2>
+      <h2 className="rated-title">Top rated</h2>
       <Slider {...settings}>
         {image.map((item) => (
           <div key={`carousel-${item.id}`} className="carousels-rated">

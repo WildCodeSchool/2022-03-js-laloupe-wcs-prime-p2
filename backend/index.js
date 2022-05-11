@@ -9,14 +9,10 @@ const session = require("express-session");
 const connection = require("./db-config");
 
 const saltRounds = 10;
-// const mysql = require("mysql2");
-// const { response } = require("express");
 
 const app = express();
 
 app.use(express.json());
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "http://localhost:3001/login"),
 app.use(
   cors({
     origin: process.env.CLIENT_URL,
@@ -25,7 +21,6 @@ app.use(
   })
 );
 
-// app.use('Access-Control-Allow-Origin':'*');
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 
