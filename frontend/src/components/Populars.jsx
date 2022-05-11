@@ -46,7 +46,7 @@ const Populars = () => {
 
   return (
     <div className="movie-popular">
-      <h2 className="popular-title">Populaires</h2>
+      <h2 className="popular-title">Popular</h2>
       <Slider {...settings}>
         {popular.map((item) => (
           <div key={`carousel-${item.id}`} className="carousels-popular">
