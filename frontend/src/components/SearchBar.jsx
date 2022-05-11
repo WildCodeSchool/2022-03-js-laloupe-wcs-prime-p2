@@ -18,7 +18,7 @@ const SearchBar = ({ setMovies }) => {
 
   useEffect(() => {
     if (searchValue) {
-      getMovieRequest();
+      getMovieRequest(setMovies);
     } else {
       setMovies([]);
     }
