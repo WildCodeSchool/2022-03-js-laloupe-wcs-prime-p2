@@ -58,7 +58,7 @@ const UserList = () => {
                     type="button"
                     className="cc"
                     onClick={() => {
-                      deleteStorage(movie);
+                      deleteStorage(movie.id);
                       window.location.reload();
                     }}
                   >
