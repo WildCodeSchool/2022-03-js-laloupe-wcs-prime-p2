@@ -37,7 +37,9 @@ const Header = ({ setMovies }) => {
         </Link>
       </ul>
       <div className="logo2">
-        <img src={logo} alt="logo2" />
+        <Link to="/">
+          <img src={logo} alt="logo2" />
+        </Link>
       </div>
       <SearchBar setMovies={setMovies} />
     </header>

@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Header from "../components/Header";
 import "@components/CoupDeCoeur.css";
+import MovieList from "@components/MovieList";
+import Header from "../components/Header";
 
 const UserList = () => {
+  const [movies, setMovies] = useState([]);
   const [listData, setListData] = useState([]);
 
   const moviesId = window.localStorage.getItem("id")
@@ -36,10 +38,11 @@ const UserList = () => {
 
   return (
     <div>
-      <Header setMovies={setListData} />
+      <Header setMovies={setMovies} />
       <div>
         <h1>Wishlist</h1>
         <div className="body_deco">
+          {movies.length && <MovieList movies={movies} />}
           {listData ? (
             listData.map((movie) => (
               <figure className="category">
@@ -53,7 +56,7 @@ const UserList = () => {
                     className="cc"
                     onClick={() => {
                       deleteStorage(movie.id);
-                      // window.location.reload();
+                      window.location.reload();
                     }}
                   >
                     Delete
