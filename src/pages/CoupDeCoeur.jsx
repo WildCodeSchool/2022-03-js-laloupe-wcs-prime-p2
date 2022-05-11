@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Header from "../components/Header";
 import "@components/CoupDeCoeur.css";
 import MovieList from "@components/MovieList";
+import Header from "../components/Header";
 
 const UserList = () => {
   const [movies, setMovies] = useState([]);
