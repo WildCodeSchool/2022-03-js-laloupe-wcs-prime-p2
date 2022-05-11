@@ -3,7 +3,7 @@ import useModal from "./UseModal";
 import "./DisplayComponent.css";
 // import CustomPagination from "./CustomPaginition";
 
-const DisplayComponent = ({ id, name, image, title, overview, vote, date }) => {
+const DisplayComponent = ({ id, name, image, title, overview, date, vote }) => {
   const { isShowing, toggle } = useModal();
   return (
     <figure className="category" key={id}>

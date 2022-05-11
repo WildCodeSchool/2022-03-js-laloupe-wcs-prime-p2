@@ -25,14 +25,14 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div>
       <Header setMovies={setMovies} />
       {!movies.length && !favourites.length && (
-        <>
+        <div>
           <Carousels />
           <Populars />
           <Rated />
-        </>
+        </div>
       )}
       {movies.length && (
         <MovieList
@@ -48,7 +48,7 @@ const Home = () => {
           favouriteComponent={<RemoveFavourites />}
         />
       )}
-    </>
+    </div>
   );
 };
 
