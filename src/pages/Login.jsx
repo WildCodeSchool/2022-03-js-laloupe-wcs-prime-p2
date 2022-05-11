@@ -107,9 +107,9 @@ function Login() {
           Login
         </button>
       </div>
-      <h1 className="loginstatus">
+      <h2 className="loginstatus">
         {loginStatus ? `Welcome ${loginStatus}` : "Login please..."}
-      </h1>
+      </h2>
       <div className="logo2">
         <Link to="/">
           <img src={logo} alt="logo2" />
