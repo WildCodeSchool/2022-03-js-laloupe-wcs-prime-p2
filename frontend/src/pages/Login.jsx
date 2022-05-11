@@ -12,14 +12,18 @@ function Login() {
 
   const [loginStatus, setLoginStatus] = useState("");
 
-  axios.defaults.withCredentials = true;
+  // axios.defaults.withCredentials = true;
 
   const register = () => {
     axios
-      .post("http://localhost:8000/register", {
-        username: usernameReg,
-        password: passwordReg,
-      })
+      .post(
+        "http://localhost:8000/register",
+        {
+          username: usernameReg,
+          password: passwordReg,
+        },
+        { withCredentials: true }
+      )
       .then((response) => {
         console.warn(response);
       });
@@ -51,48 +55,55 @@ function Login() {
   return (
     <div className="log-reg">
       <div className="registration">
-        <h1>Registration</h1>
-        <label htmlFor="username">username</label>
+        <h2>Create your account</h2>
         <input
+          className="input-login"
           type="text"
+          placeholder="Choice an username..."
           id="username"
           onChange={(e) => {
             setUsernameReg(e.target.value);
           }}
         />
-        <label htmlFor="password">Password</label>
+
         <input
+          className="input-login"
           type="text"
+          placeholder="Choice a password..."
           ide="password"
           onChange={(e) => {
             setPasswordReg(e.target.value);
           }}
         />
-        <button type="button" onClick={register}>
+        <button className="login-button" type="button" onClick={register}>
           Register
         </button>
       </div>
       <div className="login">
-        <h1>Login</h1>
+        <h2>Login</h2>
         <input
+          className="input-login"
           type="text"
-          placeholder="Username..."
+          placeholder="Your username..."
           onChange={(e) => {
             setUsername(e.target.value);
           }}
         />
         <input
+          className="input-login"
           type="password"
-          placeholder="Password..."
+          placeholder="your password..."
           onChange={(e) => {
             setPassword(e.target.value);
           }}
         />
-        <button type="button" onClick={login}>
+        <button className="login-button" type="button" onClick={login}>
           Login
         </button>
       </div>
-      <h1>{loginStatus}</h1>
+      <h1 className="loginstatus">
+        {loginStatus ? `Welcome ${loginStatus}` : "Login please..."}
+      </h1>
     </div>
   );
 }

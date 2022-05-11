@@ -3,8 +3,12 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 // eslint-disable-next-line import/no-unresolved
 import "@components/CoupDeCoeur.css";
+// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/order
+import MovieList from "@components/MovieList";
 
 const UserList = () => {
+  const [movies, setMovies] = useState([]);
   const [listData, setListData] = useState([]);
 
   const moviesId = window.localStorage.getItem("id")
@@ -23,7 +27,7 @@ const UserList = () => {
           setListData((listData) => [...listData, res.data]);
         });
     }
-  }, []);
+  }, [setListData]);
 
   const deleteStorage = (movieId) => {
     const storedData = window.localStorage.id.split(",");
@@ -37,10 +41,11 @@ const UserList = () => {
 
   return (
     <div>
-      <Header setMovies={setListData} />
+      <Header setMovies={setMovies} />
       <div>
         <h1>Wishlist</h1>
         <div className="body_deco">
+          {movies.length && <MovieList movies={movies} />}
           {listData ? (
             listData.map((movie) => (
               <figure className="category">
