@@ -26,6 +26,18 @@ const Rated = () => {
       },
     ],
   };
+
+  const addStorage = (id) => {
+    const storedData = window.localStorage.id
+      ? window.localStorage.id.split(",")
+      : [];
+
+    if (!storedData.includes(id.toString())) {
+      storedData.push(id);
+      window.localStorage.id = storedData;
+    }
+  };
+
   const [image, setImage] = useState([]);
   const getImage = () => {
     // Send the request
@@ -60,7 +72,14 @@ const Rated = () => {
                 />
                 <div className="movie-over-rated">
                   <div className="contenu-rated">
-                    <p className="overview-rated">Title : {item.title}</p>
+                    <button
+                      className="cc"
+                      type="button"
+                      onClick={() => addStorage(item.id)}
+                    >
+                      👍
+                    </button>
+                    <p className="overview-rated">{item.title}</p>
                     <p className="vote-rated">⭐️ {item.vote_average} </p>
                     <p className="date-rated">
                       Release Date : {item.release_date}{" "}

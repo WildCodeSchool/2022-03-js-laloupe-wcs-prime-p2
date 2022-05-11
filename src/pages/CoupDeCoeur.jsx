@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
+// eslint-disable-next-line import/no-unresolved
 import "@components/CoupDeCoeur.css";
 
 const UserList = () => {
@@ -45,20 +46,22 @@ const UserList = () => {
               <figure className="category">
                 <img
                   alt=""
-                  src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+                  src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                 />
                 <figcaption className="title">
                   <h2>{movie.title}</h2>
-                  <button
-                    type="button"
-                    className="cc"
-                    onClick={() => {
-                      deleteStorage(movie.id);
-                      // window.location.reload();
-                    }}
-                  >
-                    Delete
-                  </button>
+                  <div className="cont-cc">
+                    <button
+                      type="button"
+                      className="cc"
+                      onClick={() => {
+                        deleteStorage(movie.id);
+                        // window.location.reload();
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </figcaption>
               </figure>
             ))
