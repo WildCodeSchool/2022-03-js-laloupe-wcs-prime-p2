@@ -31,9 +31,6 @@ h2 {
   z-index: inherit;
   width: 100%;
 }
-.contenu-rated {
-  padding: 5px;
-}
 
 @media screen and (min-width: 1024px) {
   .card-rated {
@@ -42,8 +39,8 @@ h2 {
     margin-top: 40px;
   }
   .card-rated:hover {
-    transition: 0.7s ease;
-    transition-delay: 1s, 250ms;
+    transition: 0.5s ease;
+    transition-delay: 250ms;
     transform: scale(1.5, 1.5);
     z-index: 2000;
     position: relative;
