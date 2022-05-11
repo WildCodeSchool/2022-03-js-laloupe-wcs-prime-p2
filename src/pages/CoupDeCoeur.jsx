@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+// eslint-disable-next-line import/no-unresolved
 import "@components/CoupDeCoeur.css";
+// eslint-disable-next-line import/no-unresolved
 import MovieList from "@components/MovieList";
 import Header from "../components/Header";
 

@@ -37,6 +37,7 @@ const Carousels = () => {
     axios
       .get(
         "https://api.themoviedb.org/3/movie/upcoming?api_key=94b0467408dc50f0db83378d241839d5"
+        // { withCredentials: false }
       )
       // Extract the DATA from the received response
       .then((response) => {
