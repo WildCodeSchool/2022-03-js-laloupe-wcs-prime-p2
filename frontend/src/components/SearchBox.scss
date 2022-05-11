@@ -1,4 +1,4 @@
-.Search{
+.Search {
   display: flex;
   justify-content: center;
 }
@@ -14,7 +14,7 @@
   font-size: 1.25em;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .form-control {
     width: 55%;
     height: 2rem;
@@ -27,4 +27,3 @@
     font-size: 1em;
   }
 }
-

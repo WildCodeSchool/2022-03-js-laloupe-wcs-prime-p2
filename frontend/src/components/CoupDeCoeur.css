@@ -2,3 +2,22 @@
   min-height: 100vh;
   height: auto;
 }
+.ccOne {
+  border-radius: 50px;
+  background-color: aqua;
+  margin: 0%;
+  padding: 4px;
+}
+.cc {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  border-radius: 50px;
+  background-color: aqua;
+  margin: 0%;
+}
+.cont-cc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

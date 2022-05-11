@@ -78,9 +78,9 @@ const Populars = () => {
                     type="button"
                     onClick={() => addStorage(item.id)}
                   >
-                    Like
+                    👍
                   </button>
-                  <p className="overview">Title : {item.title}</p>
+                  <p className="overview"> {item.title}</p>
                   <p className="vote">⭐️ {item.vote_average} </p>
                   <p className="date">Release date : {item.release_date} </p>
                 </div>
