@@ -1,10 +1,9 @@
 /* eslint-disable */
-import "./MovieList.scss";
-import Modal from "./Modal";
-import useModal from "./UseModal";
 import DisplayComponent from "./DisplayComponent";
+import "./MovieList.scss";
+import useModal from "./UseModal";
 
-const MovieList = ({ movies}) => {
+const MovieList = ({ movies }) => {
   const { isShowing, toggle } = useModal();
   const addStorage = (id) => {
     const storedData = window.localStorage.id
@@ -21,12 +20,18 @@ const MovieList = ({ movies}) => {
     <div onClick={toggle} onKeyDown={toggle}>
       {movies.map((movie) => (
         <div key={movie.id} className="image-container">
-          {movie.poster_path && (
-            <img
-            src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-            alt="movie"          
-            />
-            )}
+          <DisplayComponent
+            details
+            key={movie.id}
+            id={movie.id}
+            name={movie.name}
+            title={movie.title}
+            overview={movie.overview}
+            image={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+            vote={movie.vote_average}
+            date={movie.release_date}
+          />
+
           <div
             role="button"
             tabIndex="0"
@@ -35,22 +40,13 @@ const MovieList = ({ movies}) => {
           <button
             className="cc"
             type="button"
-            onClick={() => {addStorage(movie.id)
-              window.location.reload()}}
+            onClick={() => {
+              addStorage(movie.id);
+              window.location.reload();
+            }}
           >
             👍
           </button>
-          <DisplayComponent
-            isShowing={isShowing}
-            hide={toggle}
-            key={movie.id}
-            id={movie.id}
-            title={movie.title}
-            overview={movie.overview}
-            posterPath={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-            vote={movie.vote_average}
-            date={movie.release_date}
-          />
         </div>
       ))}
     </div>

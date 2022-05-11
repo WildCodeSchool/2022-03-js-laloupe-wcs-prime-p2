@@ -46,7 +46,7 @@ const UserList = () => {
           {movies.length && <MovieList movies={movies} />}
           {listData ? (
             listData.map((movie) => (
-              <figure className="category">
+              <figure className="category" key={movie.id}>
                 <img
                   alt=""
                   src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}

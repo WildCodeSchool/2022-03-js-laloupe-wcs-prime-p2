@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "./Populars.css";
 import axios from "axios";
+
 import React, { useEffect, useState } from "react";
 
 const Populars = () => {
