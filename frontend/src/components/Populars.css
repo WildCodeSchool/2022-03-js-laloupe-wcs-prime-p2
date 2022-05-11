@@ -100,7 +100,7 @@ h2 {
   slick-dots li.slick-active button::before {
     color: aqua;
   }
-  .cc{
+  .cc {
     float: right;
   }
 }
