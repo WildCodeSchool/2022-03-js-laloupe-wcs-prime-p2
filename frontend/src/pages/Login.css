@@ -7,7 +7,7 @@
   width: 100%;
   margin:0;
   padding: 0.5rem;
-  background-color: hsla(227, 99%, 7%, 0.63);
+  background-color: hsla(227, 99%, 7%, 0.53);
   color: white;
   text-align: center;
   text-shadow: 2px 2px 2px #2980B9;
@@ -86,7 +86,7 @@
     align-items: center;
   }
 
-  h1{ 
+  h2{ 
     width: 100%;
   }
   .login{
