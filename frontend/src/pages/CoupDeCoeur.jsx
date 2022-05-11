@@ -22,7 +22,7 @@ const UserList = () => {
           setListData((listData) => [...listData, res.data]);
         });
     }
-  }, []);
+  }, [setListData]);
 
   const deleteStorage = (movieId) => {
     const storedData = window.localStorage.id.split(",");
@@ -45,10 +45,9 @@ const UserList = () => {
               <figure className="category">
                 <img
                   alt=""
-                  src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+                  src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                 />
                 <figcaption className="title">
-                  <h2>{movie.title}</h2>
                   <button
                     type="button"
                     className="cc"
@@ -59,6 +58,7 @@ const UserList = () => {
                   >
                     Delete
                   </button>
+                  <h2 className="title-cc">{movie.title}</h2>
                 </figcaption>
               </figure>
             ))
