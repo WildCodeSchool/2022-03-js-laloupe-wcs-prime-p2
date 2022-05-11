@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import HomeIcons from "../assets/Home.png";
 import CatIcons from "../assets/Categories.png";
 import CoeurIcons from "../assets/Coeur.png";
+import loginIcons from "../assets/login.png";
 
 export default function ButtonNav() {
   return (
@@ -24,6 +25,12 @@ export default function ButtonNav() {
           <li className="btn-nav">
             <img className="imgFooter" src={CoeurIcons} alt="Coup de coeur" />
             <p className="nav">Favorite</p>
+          </li>
+        </Link>
+        <Link className="login-footer" to="/Login">
+          <li className="btn-nav">
+            <img className="imgFooter" src={loginIcons} alt="Login" />
+            <p className="nav">Login</p>
           </li>
         </Link>
       </ul>

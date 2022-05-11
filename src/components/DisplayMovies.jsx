@@ -45,6 +45,7 @@ const DisplayMovies = () => {
           image={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
           vote={movie.vote_average}
           date={movie.release_date}
+          setMovies={setMovies}
         />
       ))}
       <CustomPagination setPage={setPage} />

@@ -5,6 +5,7 @@ import "./Header.css";
 import HomeIcons from "../assets/Home.png";
 import CatIcons from "../assets/Categories.png";
 import CoeurIcons from "../assets/Coeur.png";
+import loginIcons from "../assets/login.png";
 import SearchBar from "./SearchBar";
 
 const Header = ({ setMovies }) => {
@@ -35,9 +36,19 @@ const Header = ({ setMovies }) => {
             </p>
           </li>
         </Link>
+        <Link to="/Login">
+          <li className="Login">
+            <img className="imgFooter" src={loginIcons} alt="Login" />
+            <p className="navigation">
+              <span>Login</span>
+            </p>
+          </li>
+        </Link>
       </ul>
       <div className="logo2">
-        <img src={logo} alt="logo2" />
+        <Link to="/">
+          <img src={logo} alt="logo2" />
+        </Link>
       </div>
       <SearchBar setMovies={setMovies} />
     </header>
