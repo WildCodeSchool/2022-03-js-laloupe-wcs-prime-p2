@@ -1,3 +1,4 @@
-.body_deco{
-    height: 100vh;
+.body_deco {
+  min-height: 100vh;
+  height: auto;
 }
