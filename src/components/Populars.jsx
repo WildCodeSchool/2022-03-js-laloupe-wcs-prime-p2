@@ -81,7 +81,7 @@ const Populars = () => {
                     👍
                   </button>
                   <p className="overview"> {item.title}</p>
-                  <p className="vote">⭐️ {item.vote_average} </p>
+                  <p className="vote-pop">⭐️ {item.vote_average} </p>
                   <p className="date">Release date : {item.release_date} </p>
                 </div>
               </div>

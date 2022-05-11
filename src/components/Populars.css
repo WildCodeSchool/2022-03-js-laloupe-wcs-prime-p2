@@ -61,7 +61,7 @@ h2 {
     margin-top: 40px;
   }
   .card-popular:hover {
-    transition: 0.7s ease;
+    transition: 0.5s ease;
     transition-delay: 250ms;
     transform: scale(1.5, 1.5);
     z-index: 2000;
@@ -102,5 +102,8 @@ h2 {
   }
   .cc {
     float: right;
+  }
+  .overview{
+    margin: 0;
   }
 }
