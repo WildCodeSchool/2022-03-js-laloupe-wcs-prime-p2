@@ -3,7 +3,7 @@ import "./MovieList.scss";
 
 const MovieList = ({ movies, FavouriteComponent }) => {
   return (
-    <div>
+    <div className="list-movie">
       {movies.map((movie) => (
         <div key={movie.id} className="image-container">
           {movie.poster_path && (
@@ -12,12 +12,13 @@ const MovieList = ({ movies, FavouriteComponent }) => {
               alt="movie"
             />
           )}
-          <div
+          {/* <div
             role="button"
             tabIndex="0"
             onClick={() => movie.handleFavouritesClick(movie)}
           />
           {FavouriteComponent}
+        </div> */}
         </div>
       ))}
     </div>

@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import "@components/CoupDeCoeur.css";
 // eslint-disable-next-line import/no-unresolved
 // eslint-disable-next-line import/order
-import MovieList from "@components/MovieList";
+import MovieList from "../components/MovieList";
 
 const UserList = () => {
   const [movies, setMovies] = useState([]);
