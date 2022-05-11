@@ -24,7 +24,6 @@ const DisplayMovies = () => {
 
       .then((data) => {
         setGenreDetails(data.results);
-        // console.log(data.results);
       });
   };
   useEffect(() => {
@@ -37,7 +36,7 @@ const DisplayMovies = () => {
 
       {genreDetails?.map((movie) => (
         <DisplayComponent
-          poster_path={movie.image}
+          details
           overview={movie.overview}
           key={movie.id}
           id={movie.id}
