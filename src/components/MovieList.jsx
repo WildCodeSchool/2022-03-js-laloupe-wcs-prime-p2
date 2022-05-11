@@ -1,14 +1,23 @@
 /* eslint-disable */
 import DisplayComponent from "./DisplayComponent";
 import "./MovieList.scss";
-import { useState } from "react";
-import Modal from "./Modal";
 import useModal from "./UseModal";
 
-const MovieList = ({ movies, FavouriteComponent }) => {
+const MovieList = ({ movies }) => {
   const { isShowing, toggle } = useModal();
+  const addStorage = (id) => {
+    const storedData = window.localStorage.id
+      ? window.localStorage.id.split(",")
+      : [];
+
+    if (!storedData.includes(id.toString())) {
+      storedData.push(id);
+      window.localStorage.id = storedData;
+    }
+  };
+
   return (
-    <div>
+    <div onClick={toggle} onKeyDown={toggle}>
       {movies.map((movie) => (
         <div key={movie.id} className="image-container">
           <DisplayComponent
@@ -22,19 +31,22 @@ const MovieList = ({ movies, FavouriteComponent }) => {
             vote={movie.vote_average}
             date={movie.release_date}
           />
-          {/* {movie.poster_path && (
-            <img
-              key={movie.id}
-              src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-              alt="movie"
-            />
-          )} */}
+
           <div
             role="button"
             tabIndex="0"
             onClick={() => movie.handleFavouritesClick(movie)}
           />
-          {FavouriteComponent}
+          <button
+            className="cc"
+            type="button"
+            onClick={() => {
+              addStorage(movie.id);
+              window.location.reload();
+            }}
+          >
+            👍
+          </button>
         </div>
       ))}
     </div>

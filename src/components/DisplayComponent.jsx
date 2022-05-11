@@ -5,8 +5,8 @@ import "./DisplayComponent.css";
 
 const DisplayComponent = ({
   details,
-  id,
   name,
+  id,
   image,
   title,
   overview,
@@ -14,6 +14,7 @@ const DisplayComponent = ({
   vote,
 }) => {
   const { isShowing, toggle } = useModal();
+
   return (
     <figure className="category" key={id}>
       <div onClick={toggle} onKeyDown={toggle} role="button" tabIndex={0}>

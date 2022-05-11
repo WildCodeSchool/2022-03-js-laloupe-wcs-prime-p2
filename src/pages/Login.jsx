@@ -2,6 +2,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Login.css";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo2.png";
+import HomeIcons from "../assets/Home.png";
+import CatIcons from "../assets/Categories.png";
+import CoeurIcons from "../assets/Coeur.png";
+import loginIcons from "../assets/login.png";
 
 function Login() {
   const [usernameReg, setUsernameReg] = useState("");
@@ -101,9 +107,48 @@ function Login() {
           Login
         </button>
       </div>
-      <h1 className="loginstatus">
+      <h2 className="loginstatus">
         {loginStatus ? `Welcome ${loginStatus}` : "Login please..."}
-      </h1>
+      </h2>
+      <div className="logo2">
+        <Link to="/">
+          <img src={logo} alt="logo2" />
+        </Link>
+      </div>
+      <ul className="Nav">
+        <Link to="/">
+          <li className="home">
+            <img className="imgFooter" src={HomeIcons} alt="Home Icons" />
+            <p className="navigation">
+              <span>Home</span>
+            </p>
+          </li>
+        </Link>
+        <Link to="/Categories">
+          <li className="cat">
+            <img className="imgFooter" src={CatIcons} alt="Categories Icons" />
+            <p className="navigation">
+              <span>Genres</span>
+            </p>
+          </li>
+        </Link>
+        <Link to="/CoupDeCoeur">
+          <li className="coup-de-coeur">
+            <img className="imgFooter" src={CoeurIcons} alt="Coup de coeur" />
+            <p className="navigation">
+              <span>Favorite</span>
+            </p>
+          </li>
+        </Link>
+        <Link to="/Login">
+          <li className="Login">
+            <img className="imgFooter" src={loginIcons} alt="Login" />
+            <p className="navigation">
+              <span>Login</span>
+            </p>
+          </li>
+        </Link>
+      </ul>
     </div>
   );
 }

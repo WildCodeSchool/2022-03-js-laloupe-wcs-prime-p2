@@ -7,7 +7,7 @@
   width: 100%;
   margin:0;
   padding: 0.5rem;
-  background-color: hsla(227, 99%, 7%, 0.63);
+  background-color: hsla(227, 99%, 7%, 0.53);
   color: white;
   text-align: center;
   text-shadow: 2px 2px 2px #2980B9;
@@ -86,7 +86,7 @@
     align-items: center;
   }
 
-  h1{ 
+  h2{ 
     width: 100%;
   }
   .login{
@@ -104,4 +104,65 @@
   .input-login{
     width : 25%;
   }
+  
 }
+
+
+/* //Barre de navigation header */
+.Nav {
+  display: none;
+}
+
+.logo2 {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo2 img {
+  width: 100px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    width: auto;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .logo img {
+    width: 70%;
+  }
+  #search {
+    margin-top: 40px;
+    width: 40vw;
+    height: 35px;
+    border-radius: 50px;
+    background-color: aqua;
+  }
+  .Nav {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    padding-top: 0.5rem;
+    justify-content: left;
+  }
+  .Nav li {
+    background: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  .navigation {
+    color: white;
+    font-size: 20px;
+  }
+}
+

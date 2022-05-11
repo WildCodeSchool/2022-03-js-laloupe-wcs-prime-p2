@@ -3,9 +3,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 // eslint-disable-next-line import/no-unresolved
 import "@components/CoupDeCoeur.css";
-// eslint-disable-next-line import/no-unresolved
-// eslint-disable-next-line import/order
-import MovieList from "@components/MovieList";
+import MovieList from "../components/MovieList";
 
 const UserList = () => {
   const [movies, setMovies] = useState([]);
