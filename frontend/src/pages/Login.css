@@ -73,12 +73,6 @@
 }
    
 
-.login-button:active {
-  transform: translate(0px,5px);
-  -webkit-transform: translate(0px,5px);
-  border-bottom: 1px solid;
-}
-
 @media screen and (min-width: 900px){
 
   .log-reg {
@@ -86,7 +80,7 @@
     align-items: center;
   }
 
-  h2{ 
+  .loginstatus{ 
     width: 100%;
   }
   .login{
