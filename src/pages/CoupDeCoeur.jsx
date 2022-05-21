@@ -44,11 +44,12 @@ const UserList = () => {
         <h1>Wishlist</h1>
         <div className="body_deco">
           {movies.length && <MovieList movies={movies} />}
+
           {listData ? (
             listData.map((movie) => (
               <figure className="category" key={movie.id}>
                 <img
-                  alt=""
+                  alt="img"
                   src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                 />
                 <figcaption className="title">
@@ -59,7 +60,6 @@ const UserList = () => {
                       className="cc"
                       onClick={() => {
                         deleteStorage(movie.id);
-                        // window.location.reload();
                       }}
                     >
                       Delete
@@ -69,7 +69,7 @@ const UserList = () => {
               </figure>
             ))
           ) : (
-            <h2>Nothing</h2>
+            <h2>You have nothing in your wishlist yet</h2>
           )}
         </div>
       </div>
