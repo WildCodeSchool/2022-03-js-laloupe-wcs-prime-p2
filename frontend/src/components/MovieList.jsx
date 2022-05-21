@@ -5,21 +5,21 @@ import useModal from "./UseModal";
 
 const MovieList = ({ movies }) => {
   const { isShowing, toggle } = useModal();
-  const addStorage = (id) => {
-    const storedData = window.localStorage.id
-      ? window.localStorage.id.split(",")
-      : [];
+  // const addStorage = (id) => {
+  //   const storedData = window.localStorage.id
+  //     ? window.localStorage.id.split(",")
+  //     : [];
 
-    if (!storedData.includes(id.toString())) {
-      storedData.push(id);
-      window.localStorage.id = storedData;
-    }
-  };
+  //   if (!storedData.includes(id.toString())) {
+  //     storedData.push(id);
+  //     window.localStorage.id = storedData;
+  //   }
+  // };
 
   return (
-    <div onClick={toggle} onKeyDown={toggle}>
+    <div className="movlist" onClick={toggle} onKeyDown={toggle}>
       {movies.map((movie) => (
-        <div key={movie.id} className="image-container">
+        <>
           <DisplayComponent
             details
             key={movie.id}
@@ -33,11 +33,12 @@ const MovieList = ({ movies }) => {
           />
 
           <div
+            key={movie.id.name}
             role="button"
             tabIndex="0"
             onClick={() => movie.handleFavouritesClick(movie)}
           />
-          <button
+          {/* <button
             className="cc"
             type="button"
             onClick={() => {
@@ -46,8 +47,8 @@ const MovieList = ({ movies }) => {
             }}
           >
             👍
-          </button>
-        </div>
+          </button> */}
+        </>
       ))}
     </div>
   );

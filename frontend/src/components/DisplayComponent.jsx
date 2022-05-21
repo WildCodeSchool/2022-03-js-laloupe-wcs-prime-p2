@@ -1,7 +1,6 @@
 import Modal from "./Modal";
 import useModal from "./UseModal";
 import "./DisplayComponent.css";
-// import CustomPagination from "./CustomPaginition";
 
 const DisplayComponent = ({
   details,
