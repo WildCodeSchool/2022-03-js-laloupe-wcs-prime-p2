@@ -16,7 +16,12 @@ const DisplayComponent = ({
 
   return (
     <figure className="category" key={id}>
-      <div onClick={() => toggle(id)} role="button" tabIndex={0}>
+      <div
+        onClick={() => toggle(id)}
+        onKeyPress={() => toggle(id)}
+        role="button"
+        tabIndex={0}
+      >
         <img src={image} alt={name} key={id} />
       </div>
       {details && (
