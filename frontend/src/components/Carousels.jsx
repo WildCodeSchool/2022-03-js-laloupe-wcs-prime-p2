@@ -61,7 +61,12 @@ const Carousels = () => {
       <h1 className="upcoming">Upcoming films</h1>
       <Slider {...settings}>
         {image?.map((item) => (
-          <div onClick={() => toggle(item.id)} role="button" tabIndex={0}>
+          <div
+            onClick={() => toggle(item.id)}
+            onKeyPress={() => toggle(item.id)}
+            role="button"
+            tabIndex={0}
+          >
             <div key={`carousel-${item.id}`} className="carousel">
               <div className="card">
                 <div className="card-top">
