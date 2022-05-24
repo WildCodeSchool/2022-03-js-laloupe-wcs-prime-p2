@@ -61,13 +61,13 @@ const Carousels = () => {
       <h1 className="upcoming">Upcoming films</h1>
       <Slider {...settings}>
         {image?.map((item) => (
-          <div
-            onClick={() => toggle(item.id)}
-            onKeyPress={() => toggle(item.id)}
-            role="button"
-            tabIndex={0}
-          >
-            <div key={`carousel-${item.id}`} className="carousel">
+          <div key={`carousel45-${item.id}`} className="carousel">
+            <div
+              onClick={() => toggle(item.id)}
+              onKeyPress={() => toggle(item.id)}
+              role="button"
+              tabIndex={0}
+            >
               <div className="card">
                 <div className="card-top">
                   <img
@@ -81,7 +81,7 @@ const Carousels = () => {
               <Modal
                 isShowing={isShowing[item.id]}
                 hide={toggle}
-                key={item.id}
+                key={`carou-${item.id}`}
                 id={item.id}
                 title={item.title}
                 overview={item.overview}

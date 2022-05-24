@@ -5,7 +5,6 @@ const useModal = () => {
 
   function toggle(id) {
     setIsShowing({ ...isShowing, [id]: Boolean(!isShowing[id]) });
-    // console.log({ ...isShowing, [id]: Boolean(!isShowing[id]) });
   }
 
   return {

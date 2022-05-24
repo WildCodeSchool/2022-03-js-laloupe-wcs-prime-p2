@@ -42,9 +42,7 @@ h2 {
   width: 100%;
 }
 .contenu {
-  
   padding: 5px;
-  
 }
 
 /* coup de coeur */
@@ -105,7 +103,7 @@ h2 {
   .cc {
     float: right;
   }
-  .overview{
+  .overview {
     margin: 0;
   }
 }
