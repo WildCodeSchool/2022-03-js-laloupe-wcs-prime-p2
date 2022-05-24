@@ -30,9 +30,8 @@
     background-color: rgb(0, 255, 255);
     margin: 0%;
     align-items: center;
-    
   }
-  .cc:hover{
-      background-color: rgba(0,255, 255, 0.6);
+  .cc:hover {
+    background-color: rgba(0, 255, 255, 0.6);
   }
 }
