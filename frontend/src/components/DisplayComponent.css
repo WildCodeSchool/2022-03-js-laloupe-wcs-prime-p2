@@ -5,10 +5,17 @@
   margin: 0;
 }
 
+.contenu {
+  font-size: 0.7rem;
+
+}
+
 @media screen and (max-width: 850px) {
   .contenu {
+    font-weight: 600;
     display: flex;
     flex-direction: column;
+    
   }
 
   .date {

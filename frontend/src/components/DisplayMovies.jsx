@@ -24,7 +24,8 @@ const DisplayMovies = () => {
 
       .then((data) => {
         setGenreDetails(data.results);
-      });
+      })
+      .catch(console.log);
   };
   useEffect(() => {
     getGenres(genre);

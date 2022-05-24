@@ -1,7 +1,6 @@
 import Modal from "./Modal";
 import useModal from "./UseModal";
 import "./DisplayComponent.css";
-// import CustomPagination from "./CustomPaginition";
 
 const DisplayComponent = ({
   details,
@@ -13,11 +12,16 @@ const DisplayComponent = ({
   date,
   vote,
 }) => {
-  const { isShowing, toggle } = useModal();
+  const { isShowing, toggle } = useModal({});
 
   return (
     <figure className="category" key={id}>
-      <div onClick={toggle} onKeyDown={toggle} role="button" tabIndex={0}>
+      <div
+        onClick={() => toggle(id)}
+        onKeyPress={() => toggle(id)}
+        role="button"
+        tabIndex={0}
+      >
         <img src={image} alt={name} key={id} />
       </div>
       {details && (
@@ -31,8 +35,8 @@ const DisplayComponent = ({
       )}
 
       <Modal
-        isShowing={isShowing}
-        hide={toggle}
+        isShowing={isShowing[id]}
+        hide={() => toggle(id)}
         key={id}
         id={id}
         title={title}
