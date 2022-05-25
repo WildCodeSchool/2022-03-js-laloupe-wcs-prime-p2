@@ -43,9 +43,9 @@ const UserList = () => {
       <div>
         <h1>Wishlist</h1>
         <div className="body_deco">
-          {movies.length && <MovieList movies={movies} />}
+          {!!movies.length && <MovieList movies={movies} />}
 
-          {listData ? (
+          {listData.length ? (
             listData.map((movie) => (
               <figure className="category" key={movie.id}>
                 <img
