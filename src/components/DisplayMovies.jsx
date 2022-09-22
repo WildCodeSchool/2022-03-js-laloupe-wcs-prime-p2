@@ -24,8 +24,8 @@ const DisplayMovies = () => {
 
       .then((data) => {
         setGenreDetails(data.results);
-        // console.log(data.results);
-      });
+      })
+      .catch(console.log);
   };
   useEffect(() => {
     getGenres(genre);
@@ -37,7 +37,7 @@ const DisplayMovies = () => {
 
       {genreDetails?.map((movie) => (
         <DisplayComponent
-          poster_path={movie.image}
+          details
           overview={movie.overview}
           key={movie.id}
           id={movie.id}
@@ -45,6 +45,7 @@ const DisplayMovies = () => {
           image={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
           vote={movie.vote_average}
           date={movie.release_date}
+          setMovies={setMovies}
         />
       ))}
       <CustomPagination setPage={setPage} />

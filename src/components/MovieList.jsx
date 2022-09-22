@@ -1,24 +1,30 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-import React from "react";
+import DisplayComponent from "./DisplayComponent";
+import "./MovieList.scss";
 
-const MovieList = ({ movies, FavouriteComponent }) => {
+const MovieList = ({ movies }) => {
   return (
-    <div>
+    <div className="movlist">
       {movies.map((movie) => (
-        <div key={movie.id} className="image-containe">
-          <img
-            src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-            alt="movie"
+        <>
+          <DisplayComponent
+            details
+            key={movie.id}
+            id={movie.id}
+            name={movie.name}
+            title={movie.title}
+            overview={movie.overview}
+            image={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+            vote={movie.vote_average}
+            date={movie.release_date}
           />
+
           <div
-            onClick={() => movies.handleFavouritesClick(movie)}
+            key={movie.id.name}
             role="button"
             tabIndex="0"
-          >
-            On Click
-          </div>
-          {FavouriteComponent}
-        </div>
+            onClick={() => movie.handleFavouritesClick(movie)}
+          />
+        </>
       ))}
     </div>
   );

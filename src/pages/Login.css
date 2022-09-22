@@ -2,24 +2,148 @@
   box-sizing: border-box;
 }
 
+.loginstatus {
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: hsla(227, 99%, 7%, 0.53);
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 2px #2980b9;
+}
+
 .log-reg {
   display: flex;
   flex-direction: column-reverse;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
+  align-items: center;
 }
 
 .login {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
+  margin: 20%;
+  margin-top: 2rem;
+  background-color: hsla(227, 99%, 7%, 0.33);
+  border-radius: 5px;
+  width: 70%;
 }
 
 .registration {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  margin: 20%;
+  margin-top: 2rem;
+  background-color: hsla(227, 99%, 7%, 0.33);
+  border-radius: 5px;
+  width: 70%;
+}
+
+.registration label {
+  color: white;
+}
+
+.input-login {
+  margin: 20px;
+  box-shadow: 1px 1px 1px 1px aqua;
+  border-radius: 5px;
+  border: 2px solid aqua;
+  height: 22px;
+}
+
+.login-button {
+  margin: 2em;
+  padding: 10px 40px;
+  border-radius: 10px;
+  font-family: "Pacifico", cursive;
+  font-size: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #3498db;
+  border-bottom: 5px solid #2980b9;
+  text-shadow: 0px -2px #2980b9;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+@media screen and (min-width: 900px) {
+  .log-reg {
+    align-items: center;
+  }
+
+  .loginstatus {
+    width: 100%;
+  }
+  .login {
+    width: 40%;
+    height: 40%;
+    margin: 5%;
+  }
+  .registration {
+    width: 40%;
+    height: 40%;
+    margin: 5%;
+  }
+  .input-login {
+    width: 25%;
+  }
+}
+
+/* //Barre de navigation header */
+.Nav {
+  display: none;
+}
+
+.logo2 {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo2 img {
+  width: 100px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    width: auto;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .logo img {
+    width: 70%;
+  }
+  #search {
+    margin-top: 40px;
+    width: 40vw;
+    height: 35px;
+    border-radius: 50px;
+    background-color: aqua;
+  }
+  .Nav {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    padding-top: 0.5rem;
+    justify-content: left;
+  }
+  .Nav li {
+    background: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  .navigation {
+    color: white;
+    font-size: 20px;
+  }
 }

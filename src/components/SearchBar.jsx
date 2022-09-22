@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 import SearchBox from "./SearchBox";
 
 const SearchBar = ({ setMovies }) => {
-  // const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   // const [favourites, setFavourites] = useState([]);
 
@@ -21,7 +19,7 @@ const SearchBar = ({ setMovies }) => {
 
   useEffect(() => {
     if (searchValue) {
-      getMovieRequest();
+      getMovieRequest(setMovies);
     } else {
       setMovies([]);
     }

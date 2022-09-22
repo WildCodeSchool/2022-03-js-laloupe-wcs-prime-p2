@@ -2,6 +2,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Login.css";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo2.png";
+import HomeIcons from "../assets/Home.png";
+import CatIcons from "../assets/Categories.png";
+import CoeurIcons from "../assets/Coeur.png";
+import loginIcons from "../assets/login.png";
 
 function Login() {
   const [usernameReg, setUsernameReg] = useState("");
@@ -12,14 +18,18 @@ function Login() {
 
   const [loginStatus, setLoginStatus] = useState("");
 
-  axios.defaults.withCredentials = true;
+  // axios.defaults.withCredentials = true;
 
   const register = () => {
     axios
-      .post("http://localhost:8000/register", {
-        username: usernameReg,
-        password: passwordReg,
-      })
+      .post(
+        "http://localhost:8000/register",
+        {
+          username: usernameReg,
+          password: passwordReg,
+        },
+        { withCredentials: true }
+      )
       .then((response) => {
         console.warn(response);
       });
@@ -51,48 +61,94 @@ function Login() {
   return (
     <div className="log-reg">
       <div className="registration">
-        <h1>Registration</h1>
-        <label htmlFor="username">username</label>
+        <h2>Create your account</h2>
         <input
+          className="input-login"
           type="text"
+          placeholder="Choice an username..."
           id="username"
           onChange={(e) => {
             setUsernameReg(e.target.value);
           }}
         />
-        <label htmlFor="password">Password</label>
+
         <input
+          className="input-login"
           type="text"
+          placeholder="Choice a password..."
           ide="password"
           onChange={(e) => {
             setPasswordReg(e.target.value);
           }}
         />
-        <button type="button" onClick={register}>
+        <button className="login-button" type="button" onClick={register}>
           Register
         </button>
       </div>
       <div className="login">
-        <h1>Login</h1>
+        <h2>Login</h2>
         <input
+          className="input-login"
           type="text"
-          placeholder="Username..."
+          placeholder="Your username..."
           onChange={(e) => {
             setUsername(e.target.value);
           }}
         />
         <input
+          className="input-login"
           type="password"
-          placeholder="Password..."
+          placeholder="your password..."
           onChange={(e) => {
             setPassword(e.target.value);
           }}
         />
-        <button type="button" onClick={login}>
+        <button className="login-button" type="button" onClick={login}>
           Login
         </button>
       </div>
-      <h1>{loginStatus}</h1>
+      <h2 className="loginstatus">
+        {loginStatus ? `Welcome ${loginStatus}` : "Login please..."}
+      </h2>
+      <div className="logo2">
+        <Link to="/">
+          <img src={logo} alt="logo2" />
+        </Link>
+      </div>
+      <ul className="Nav">
+        <Link to="/">
+          <li className="home">
+            <img className="imgFooter" src={HomeIcons} alt="Home Icons" />
+            <p className="navigation">
+              <span>Home</span>
+            </p>
+          </li>
+        </Link>
+        <Link to="/Categories">
+          <li className="cat">
+            <img className="imgFooter" src={CatIcons} alt="Categories Icons" />
+            <p className="navigation">
+              <span>Genres</span>
+            </p>
+          </li>
+        </Link>
+        <Link to="/CoupDeCoeur">
+          <li className="coup-de-coeur">
+            <img className="imgFooter" src={CoeurIcons} alt="Coup de coeur" />
+            <p className="navigation">
+              <span>Favorite</span>
+            </p>
+          </li>
+        </Link>
+        <Link to="/Login">
+          <li className="Login">
+            <img className="imgFooter" src={loginIcons} alt="Login" />
+            <p className="navigation">
+              <span>Login</span>
+            </p>
+          </li>
+        </Link>
+      </ul>
     </div>
   );
 }

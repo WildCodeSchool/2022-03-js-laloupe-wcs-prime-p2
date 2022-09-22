@@ -1,0 +1,37 @@
+.body_deco {
+  min-height: 100vh;
+  height: auto;
+}
+.ccOne {
+  border-radius: 50px;
+  background-color: aqua;
+  margin: 0%;
+  padding: 4px;
+}
+.cc {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  border-radius: 50px;
+  background-color: aqua;
+  margin: 0%;
+}
+.cont-cc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .cc {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    border-radius: 30px;
+    background-color: rgb(0, 255, 255);
+    margin: 0%;
+    align-items: center;
+  }
+  .cc:hover {
+    background-color: rgba(0, 255, 255, 0.6);
+  }
+}

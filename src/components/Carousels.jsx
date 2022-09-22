@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "./Carousels.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Modal from "./Modal";
+import useModal from "./UseModal";
 
 const Carousels = () => {
   const settings = {
@@ -31,12 +33,14 @@ const Carousels = () => {
       },
     ],
   };
+
   const [image, setImage] = useState([]);
   const getImage = () => {
     // Send the request
     axios
       .get(
         "https://api.themoviedb.org/3/movie/upcoming?api_key=94b0467408dc50f0db83378d241839d5"
+        // { withCredentials: false }
       )
       // Extract the DATA from the received response
       .then((response) => {
@@ -51,21 +55,40 @@ const Carousels = () => {
   useEffect(() => {
     getImage();
   }, []);
+  const { isShowing, toggle } = useModal();
   return (
     <>
       <h1 className="upcoming">Upcoming films</h1>
       <Slider {...settings}>
-        {image.map((item) => (
-          <div key={`carousel-${item.id}`} className="carousel">
-            <div className="card">
-              <div className="card-top">
-                <img
-                  className="nouv"
-                  src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
-                  alt=""
-                />
-                <h2>{item.original_title}</h2>
+        {image?.map((item) => (
+          <div key={`carousel45-${item.id}`} className="carousel">
+            <div
+              onClick={() => toggle(item.id)}
+              onKeyPress={() => toggle(item.id)}
+              role="button"
+              tabIndex={0}
+            >
+              <div className="card">
+                <div className="card-top">
+                  <img
+                    className="nouv"
+                    src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
+                    alt={item.original_title}
+                  />
+                  <h2>{item.original_title}</h2>
+                </div>
               </div>
+              <Modal
+                isShowing={isShowing[item.id]}
+                hide={toggle}
+                key={`carou-${item.id}`}
+                id={item.id}
+                title={item.title}
+                overview={item.overview}
+                posterPath={`https://image.tmdb.org/t/p/original${item.poster_path}`}
+                vote={item.vote}
+                date={item.date}
+              />
             </div>
           </div>
         ))}

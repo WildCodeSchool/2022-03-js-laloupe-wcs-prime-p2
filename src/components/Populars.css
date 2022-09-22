@@ -45,6 +45,15 @@ h2 {
   padding: 5px;
 }
 
+/* coup de coeur */
+.heartImg {
+  display: flex;
+  padding: 7px;
+  height: 15px;
+  width: 15px;
+  float: right;
+}
+
 @media screen and (min-width: 1024px) {
   .card-popular {
     transition: 0.5s ease;
@@ -52,8 +61,8 @@ h2 {
     margin-top: 40px;
   }
   .card-popular:hover {
-    transition: 0.7s ease;
-    transition-delay: 1s, 250ms;
+    transition: 0.5s ease;
+    transition-delay: 250ms;
     transform: scale(1.5, 1.5);
     z-index: 2000;
     position: relative;
@@ -90,5 +99,11 @@ h2 {
   }
   slick-dots li.slick-active button::before {
     color: aqua;
+  }
+  .cc {
+    float: right;
+  }
+  .overview {
+    margin: 0;
   }
 }
